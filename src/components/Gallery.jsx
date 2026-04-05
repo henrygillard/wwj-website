@@ -5,7 +5,8 @@ import { allPhotos } from '../data/photos'
 const TABS = [
   { key: 'all', label: 'All' },
   { key: 'promo', label: 'Promo' },
-  { key: 'live', label: 'Live Shows' },
+  { key: 'live', label: 'Independence Brewing' },
+  { key: 'cmw', label: 'Central Machine Works' },
 ]
 
 export default function Gallery({ onOpenPhoto }) {

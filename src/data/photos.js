@@ -49,4 +49,29 @@ export const livePhotos = [
   group: 'live',
 }))
 
-export const allPhotos = [...promoPhotos, ...livePhotos]
+// Central Machine Works + other show photos
+export const cmwPhotos = [
+  { id: '1pU_tJBNf0LCxAlDVALEgD4lBnJMB2rN_', label: 'IMG_2494' },
+  { id: '1HU6EGP_lzkPcDvreGb-Bsmkf9Cm1VuMk', label: 'IMG_2720' },
+  { id: '18WRit3bnjCLA52uHTNTc6YW27mnTfcBP',  label: 'IMG_2733' },
+  { id: '1kqQ4SCDYmIiMLLV_ZkdDEwG4sVlcd5UQ', label: 'IMG_2734' },
+  { id: '1r0GYVKMKZ5Pqwqpq-saZCCK7ea6Nossq', label: 'IMG_2752' },
+  { id: '19MkPNDQVa1cc4XRsEP2kM35MJqyS0jze', label: 'IMG_2758' },
+  { id: '1JQY8eukYcTeD2aXc-QczOabNs5v9mLv3', label: 'IMG_2761' },
+  { id: '1_5uJMJrgd1pitGZI_qtJjM69WkLz-pnO', label: 'IMG_2764' },
+  { id: '17LKlvsIcZrBpFXIhxNsHCHTll29IA_ej', label: 'IMG_2773' },
+  { id: '1GGOBqq6zLgyFN3ZYo0Bu8l4K0ppPVc4_', label: 'P1080865' },
+  { id: '1OfeFit4_NPMW8z8eoI8DJp4O3mTvGWrx', label: 'P1080876' },
+  { id: '1iCrIjGcnZD4pbUZ3pEDWcYvN4E74Wmtl', label: 'P1080918' },
+  { id: '1KXeV9Q5vVRa-WW9XIwldMYcP1ft5ExFe', label: 'P1080933' },
+  { id: '1PNz6YypVFqappEJm54ODZzNUpEF-L-dq', label: 'P1090073' },
+  { id: '1r5adxHYfXapU8-yuRh8FcfqYy_jINha9', label: 'P1090076' },
+  { id: '1QCAyERcgAvOjFZd2_G47ZWrNF5kOEGxf', label: 'P1090111' },
+].map((p) => ({
+  ...p,
+  src: thumb(p.id),
+  fullSrc: thumb(p.id, 'w1600'),
+  group: 'cmw',
+}))
+
+export const allPhotos = [...promoPhotos, ...livePhotos, ...cmwPhotos]
