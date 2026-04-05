@@ -1,0 +1,14 @@
+.tape {
+  height: 8px;
+  background: repeating-linear-gradient(
+    90deg,
+    var(--yellow) 0px,
+    var(--yellow) 40px,
+    var(--blue) 40px,
+    var(--blue) 80px,
+    var(--red) 80px,
+    var(--red) 120px,
+    var(--white) 120px,
+    var(--white) 160px
+  );
+}

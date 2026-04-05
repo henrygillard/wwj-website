@@ -1,0 +1,47 @@
+.footer {
+  background: var(--dark);
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  font-family: 'Space Mono', monospace;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 0.5rem;
+}
+
+.logo span {
+  color: var(--yellow);
+}
+
+.tagline {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 0.85rem;
+  margin-bottom: 1.5rem;
+}
+
+.links {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+.links a {
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+  font-size: 0.85rem;
+  transition: color 0.2s;
+}
+
+.links a:hover {
+  color: var(--yellow);
+}
+
+.copy {
+  color: rgba(255, 255, 255, 0.25);
+  font-size: 0.75rem;
+}

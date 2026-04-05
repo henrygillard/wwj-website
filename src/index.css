@@ -1,0 +1,66 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --blue: #0057A8;
+  --blue-dark: #003d7a;
+  --blue-light: #e8f0fb;
+  --red: #E8002D;
+  --yellow: #FFD600;
+  --green: #00B87C;
+  --white: #ffffff;
+  --off-white: #F7F8FC;
+  --dark: #0F0F1A;
+  --gray: #6B7280;
+  --border: #E5E7EB;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Space Grotesk', sans-serif;
+  background: var(--white);
+  color: var(--dark);
+  overflow-x: hidden;
+}
+
+section {
+  scroll-margin-top: 64px;
+}
+
+.tape-strip {
+  height: 8px;
+  background: repeating-linear-gradient(
+    90deg,
+    var(--yellow) 0px,
+    var(--yellow) 40px,
+    var(--blue) 40px,
+    var(--blue) 80px,
+    var(--red) 80px,
+    var(--red) 120px,
+    var(--white) 120px,
+    var(--white) 160px
+  );
+}
+
+.section-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--blue);
+  margin-bottom: 0.75rem;
+}
+
+.section-title {
+  font-family: 'Space Mono', monospace;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--dark);
+}
