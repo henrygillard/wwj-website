@@ -18,9 +18,9 @@ export default function About({ onOpenPhoto }) {
       <div className={styles.inner}>
         <div className={styles.text}>
           <p className="section-label">Who we are</p>
-          <h2 className="section-title">We are WWJ.</h2>
+          <h2 className="section-title">We are Wrestle With Jimmy.</h2>
           <p>
-            WWJ is Austin's premier Weezer cover band, bringing the blue album
+            Westle With Jimmy is Austin's premier Weezer cover band, bringing the blue album
             energy to venues, festivals, and basements across the city. From
             Buddy Holly to Undone, we play the songs that made a generation of
             kids feel like it was okay to be a little weird.

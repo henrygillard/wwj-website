@@ -1,10 +1,10 @@
 // ── 2025-01 Barton Springs Promo Shoot ───────────────────────────────────────
 export const bartonSpringsPhotos = [
-  'DSC06956', 'DSC06959', 'DSC06967', 'DSC06973', 'DSC06978',
-  'DSC06987', 'DSC06995', 'DSC07023', 'DSC07049', 'DSC07053',
-  'DSC07069', 'DSC07113', 'DSC07120', 'DSC07123', 'DSC07136',
-  'DSC07157', 'DSC07164', 'DSC07182', 'DSC07322', 'DSC07334',
-  'DSC07401', 'DSC07425', 'DSC07459', 'DSC07470', 'DSC07479',
+  'DSC06956', 'DSC06973', 'DSC06978',
+  'DSC06987', 'DSC06995', 'DSC07023', 'DSC07049',
+  'DSC07069', 'DSC07123', 'DSC07136',
+  'DSC07157', 'DSC07164', 'DSC07182', 'DSC07334',
+  'DSC07401', 'DSC07425', 'DSC07459', 'DSC07479',
 ].map((label) => ({
   label,
   src: `/photos/barton-springs/${label}.jpg`,

@@ -34,7 +34,7 @@ export default function Contact() {
     <section id="contact" className={styles.contact}>
       <div className={styles.inner}>
         <p className="section-label">Get in touch</p>
-        <h2 className="section-title">Book WWJ</h2>
+        <h2 className="section-title">Book Wrestle With Jimmy</h2>
         <p className={styles.subtitle}>
           Want us at your venue, festival, or backyard birthday party? We're in.
           Send us a message.
