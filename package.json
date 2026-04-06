@@ -7,8 +7,8 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "serve": "node server/index.js",
-    "start": "npm run build && npm run serve"
+    "heroku-postbuild": "vite build",
+    "start": "node server/index.js"
   },
   "dependencies": {
     "dotenv": "^17.4.1",
