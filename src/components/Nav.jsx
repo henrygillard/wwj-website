@@ -15,7 +15,7 @@ export default function Nav() {
       <ul className={`${styles.links} ${open ? styles.linksOpen : ''}`}>
         <li><a href="#about" onClick={close}>About</a></li>
         <li><a href="#gallery" onClick={close}>Gallery</a></li>
-        <li><a href="#video" onClick={close}>Video</a></li>
+        <li><a href="#video" onClick={close}>Videos</a></li>
         <li><a href="#events" onClick={close}>Shows</a></li>
         <li><a href="#testimonials" onClick={close}>Reviews</a></li>
         <li><a href="#contact" onClick={close}>Book Us</a></li>
