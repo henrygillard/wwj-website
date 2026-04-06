@@ -22,7 +22,7 @@ export default function Events() {
       <div className={styles.inner}>
         <div className={styles.header}>
           <p className="section-label">Shows</p>
-          <h2 className="section-title">Shows</h2>
+          <h2 className="section-title">Upcoming Shows</h2>
         </div>
 
         {upcoming.length > 0 ? (

@@ -2,7 +2,7 @@ import styles from './Testimonials.module.css'
 
 const TESTIMONIALS = [
   {
-    quote: "I drove 14 hours from Tulsa just to see Wrestle With Jimmy. I told my wife I was at a work conference. She found my Buddy Holly shirt. Worth it.",
+    quote: "I drove 14 hours from Tulsa just to see Wrestle With Jimmy. I told my wife I was at a work conference. She found my WWJ shirt. Worth it.",
     name: "DaveFromTulsa",
     handle: "@weezerfan4life",
     rating: 5,
