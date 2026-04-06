@@ -1,8 +1,17 @@
 import styles from './Hero.module.css'
+import { recapVideo } from '../data/assets'
 
 export default function Hero() {
   return (
     <section className={styles.hero} id="home">
+      <video
+        className={styles.videoBg}
+        src={recapVideo.src}
+        autoPlay
+        loop
+        muted
+        playsInline
+      />
       <div className={styles.content}>
         <p className={styles.eyebrow}>Austin, TX · Weezer Cover Band</p>
         <h1 className={styles.title}>

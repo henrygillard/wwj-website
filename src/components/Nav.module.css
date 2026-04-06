@@ -12,7 +12,7 @@
 }
 
 .logo {
-  font-family: 'Space Mono', monospace;
+  font-family: 'IBM Plex Mono', monospace;
   font-weight: 700;
   font-size: 1.5rem;
   color: var(--white);
@@ -24,6 +24,12 @@
   color: var(--yellow);
 }
 
+.logoImg {
+  height: 110px;
+  width: auto;
+  display: block;
+}
+
 .links {
   display: flex;
   gap: 2rem;
@@ -33,9 +39,11 @@
 .links a {
   color: rgba(255, 255, 255, 0.85);
   text-decoration: none;
-  font-size: 0.95rem;
-  font-weight: 500;
-  letter-spacing: 0.03em;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.82rem;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
   transition: color 0.2s;
 }
 
@@ -43,6 +51,68 @@
   color: var(--yellow);
 }
 
-@media (max-width: 480px) {
-  .links { display: none; }
+/* Hamburger */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  z-index: 101;
+}
+
+.bar {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--white);
+  border-radius: 2px;
+  transition: transform 0.25s, opacity 0.25s;
+  transform-origin: center;
+}
+
+.barTop {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.barMid {
+  opacity: 0;
+}
+
+.barBot {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+@media (max-width: 600px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .links {
+    display: none;
+    position: absolute;
+    top: 64px;
+    left: 0; right: 0;
+    background: var(--blue);
+    border-bottom: 3px solid var(--yellow);
+    flex-direction: column;
+    gap: 0;
+    padding: 0.5rem 0;
+  }
+
+  .linksOpen {
+    display: flex;
+  }
+
+  .links li {
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .links a {
+    display: block;
+    padding: 0.9rem 2rem;
+    font-size: 0.85rem;
+  }
 }

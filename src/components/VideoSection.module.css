@@ -1,0 +1,37 @@
+.section {
+  padding: 6rem 2rem;
+  background: var(--blue);
+  color: var(--white);
+}
+
+.section :global(.section-label) {
+  color: var(--yellow);
+}
+
+.section :global(.section-title) {
+  color: var(--white);
+}
+
+.inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.embedWrapper {
+  margin-top: 2.5rem;
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+  overflow: hidden;
+  border-radius: 12px;
+  border: 3px solid var(--yellow);
+}
+
+.embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}

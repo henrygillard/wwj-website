@@ -1,6 +1,19 @@
 .about {
   padding: 6rem 2rem;
-  background: var(--off-white);
+  background:
+    linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+    url('/photos/radio-east/cover-image.jpg') no-repeat center center / cover;
+}
+
+/* Override global section-label to yellow for dark background */
+.about :global(.section-label) {
+  color: var(--yellow);
+}
+
+/* Override global section-title to white for dark background */
+.about :global(.section-title) {
+  color: var(--white);
+  margin-bottom: 1.5rem;
 }
 
 .inner {
@@ -12,14 +25,18 @@
   align-items: center;
 }
 
-.text .section-title {
-  margin-bottom: 1.5rem;
+.text {
+  background: rgba(0, 0, 0, 0.45);
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  padding: 2rem;
+  border-radius: 8px;
+  backdrop-filter: blur(4px);
 }
 
 .text p {
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   line-height: 1.75;
-  color: #374151;
+  color: rgba(255, 255, 255, 0.88);
   margin-bottom: 1rem;
 }
 
@@ -30,31 +47,33 @@
 .stats {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 1.5rem;
+  gap: 1.25rem;
   margin-top: 2.5rem;
 }
 
 .statCard {
-  background: var(--white);
-  border: 2px solid var(--border);
+  background: rgba(255, 255, 255, 0.95);
+  border: 2px solid var(--yellow);
   border-radius: 8px;
   padding: 1.25rem;
   text-align: center;
 }
 
 .statNumber {
-  font-family: 'Space Mono', monospace;
-  font-size: 2rem;
-  font-weight: 700;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 2.2rem;
+  font-weight: 800;
   color: var(--blue);
+  line-height: 1;
 }
 
 .statLabel {
-  font-size: 0.8rem;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.68rem;
   color: var(--gray);
   text-transform: uppercase;
-  letter-spacing: 0.08em;
-  margin-top: 0.25rem;
+  letter-spacing: 0.1em;
+  margin-top: 0.35rem;
 }
 
 .imageStack {
@@ -69,7 +88,7 @@
   aspect-ratio: 3 / 4;
   object-fit: cover;
   border-radius: 8px;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
   cursor: pointer;
   transition: transform 0.2s;
 }

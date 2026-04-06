@@ -1,5 +1,5 @@
 import styles from './About.module.css'
-import { promoPhotos } from '../data/photos'
+
 
 const STATS = [
   { number: '4+', label: 'Venues played' },
@@ -8,9 +8,10 @@ const STATS = [
   { number: '0', label: 'Undone sweaters' },
 ]
 
+const hero1 = '/photos/barton-springs/hero-1.jpg'
+const hero2 = '/photos/barton-springs/hero-2.jpg'
+
 export default function About({ onOpenPhoto }) {
-  const hero1 = promoPhotos[0]
-  const hero2 = promoPhotos[4]
 
   return (
     <section id="about" className={styles.about}>
@@ -42,16 +43,16 @@ export default function About({ onOpenPhoto }) {
 
         <div className={styles.imageStack}>
           <img
-            src={hero1.src}
+            src={hero1}
             alt="WWJ live"
             loading="lazy"
-            onClick={() => onOpenPhoto(hero1.fullSrc)}
+            onClick={() => onOpenPhoto(hero1)}
           />
           <img
-            src={hero2.src}
+            src={hero2}
             alt="WWJ on stage"
             loading="lazy"
-            onClick={() => onOpenPhoto(hero2.fullSrc)}
+            onClick={() => onOpenPhoto(hero2)}
           />
         </div>
       </div>

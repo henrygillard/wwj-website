@@ -5,11 +5,12 @@
 }
 
 .logo {
-  font-family: 'Space Mono', monospace;
-  font-size: 1.75rem;
-  font-weight: 700;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 2rem;
+  font-weight: 800;
   color: var(--white);
   margin-bottom: 0.5rem;
+  letter-spacing: 0.02em;
 }
 
 .logo span {
@@ -17,8 +18,11 @@
 }
 
 .tagline {
+  font-family: 'IBM Plex Mono', monospace;
   color: rgba(255, 255, 255, 0.4);
-  font-size: 0.85rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
   margin-bottom: 1.5rem;
 }
 
@@ -33,7 +37,10 @@
 .links a {
   color: rgba(255, 255, 255, 0.5);
   text-decoration: none;
-  font-size: 0.85rem;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
   transition: color 0.2s;
 }
 
@@ -42,6 +49,8 @@
 }
 
 .copy {
-  color: rgba(255, 255, 255, 0.25);
-  font-size: 0.75rem;
+  font-family: 'IBM Plex Mono', monospace;
+  color: rgba(255, 255, 255, 0.2);
+  font-size: 0.7rem;
+  letter-spacing: 0.05em;
 }
