@@ -6,7 +6,7 @@ export default function VideoSection() {
     <section id="video" className={styles.section}>
       <div className={styles.inner}>
         <p className="section-label">Watch</p>
-        <h2 className="section-title">The Show</h2>
+        <h2 className="section-title">Watch Us Live</h2>
         <div className={styles.embedWrapper}>
           <video
             src={recapVideo.src}

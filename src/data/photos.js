@@ -7,6 +7,7 @@ export const bartonSpringsPhotos = [
   'DSC07401', 'DSC07425', 'DSC07459', 'DSC07479',
 ].map((label) => ({
   label,
+  alt: `Wrestle With Jimmy — Barton Springs promo shoot, Austin TX`,
   src: `/photos/barton-springs/${label}.jpg`,
   group: 'bartonSprings',
 }))
@@ -18,6 +19,7 @@ export const radioEastPhotos = [
   'DSC5650', 'DSC5656', 'DSC5666', 'DSC5682',
 ].map((label) => ({
   label,
+  alt: `Wrestle With Jimmy performing live at Radio East, Austin TX`,
   src: `/photos/radio-east/${label}.jpg`,
   group: 'radioEast',
 }))

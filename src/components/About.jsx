@@ -2,7 +2,7 @@ import styles from './About.module.css'
 
 
 const STATS = [
-  { number: '4+', label: 'Venues played' },
+  { number: '10+', label: 'Venues played' },
   { number: 'ATX', label: 'Based in Austin' },
   { number: '∞', label: 'Weezer songs known' },
   { number: '0', label: 'Undone sweaters' },
@@ -20,7 +20,7 @@ export default function About({ onOpenPhoto }) {
           <p className="section-label">Who we are</p>
           <h2 className="section-title">We are Wrestle With Jimmy.</h2>
           <p>
-            Westle With Jimmy is Austin's premier Weezer cover band, bringing the blue album
+            Wrestle With Jimmy is Austin's premier Weezer cover band, bringing the blue album
             energy to venues, festivals, and basements across the city. From
             Buddy Holly to Undone, we play the songs that made a generation of
             kids feel like it was okay to be a little weird.
@@ -44,13 +44,13 @@ export default function About({ onOpenPhoto }) {
         <div className={styles.imageStack}>
           <img
             src={hero1}
-            alt="WWJ live"
+            alt="Wrestle With Jimmy performing live in Austin, TX"
             loading="lazy"
             onClick={() => onOpenPhoto(hero1)}
           />
           <img
             src={hero2}
-            alt="WWJ on stage"
+            alt="Wrestle With Jimmy on stage at a Weezer tribute show"
             loading="lazy"
             onClick={() => onOpenPhoto(hero2)}
           />

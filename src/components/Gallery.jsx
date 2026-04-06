@@ -21,7 +21,7 @@ export default function Gallery({ onOpenPhoto }) {
     <section id="gallery" className={styles.gallery}>
       <div className={styles.header}>
         <p className="section-label">Photos</p>
-        <h2 className="section-title">The Shots</h2>
+        <h2 className="section-title">Live Photos</h2>
       </div>
 
       <div className={styles.grid}>
@@ -31,7 +31,7 @@ export default function Gallery({ onOpenPhoto }) {
             className={styles.item}
             onClick={() => onOpenPhoto(photo.src)}
           >
-            <img src={photo.src} alt={`WWJ — ${photo.label}`} loading="lazy" />
+            <img src={photo.src} alt={photo.alt} loading="lazy" />
             <div className={styles.overlay} />
           </div>
         ))}

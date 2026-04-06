@@ -14,7 +14,7 @@ export default function Hero() {
       />
       <div className={styles.content}>
         <p className={styles.eyebrow}>Austin, TX · Weezer Cover Band</p>
-        <h1 className={styles.title}>
+        <h1 className={styles.title} aria-label="Wrestle With Jimmy">
           W<span className={styles.accent}>W</span>J
         </h1>
         <p className={styles.subtitle}>

@@ -6,7 +6,7 @@ export default function Footer() {
       <div className={styles.logo}>
         W<span>W</span>J
       </div>
-      <p className={styles.tagline}>Austin, TX · Weezer Cover Band</p>
+      <p className={styles.tagline}>Austin's Weezer tribute band — available for bookings in Austin, TX and surrounding areas.</p>
       <nav className={styles.links}>
         <a href="#about">About</a>
         <a href="#gallery">Gallery</a>
