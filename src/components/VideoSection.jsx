@@ -10,6 +10,7 @@ export default function VideoSection() {
         <div className={styles.embedWrapper}>
           <video
             src={recapVideo.src}
+            poster="/photos/barton-springs/hero-1.jpg"
             title={recapVideo.title}
             controls
             className={styles.embed}

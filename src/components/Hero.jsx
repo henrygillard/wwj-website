@@ -7,6 +7,7 @@ export default function Hero() {
       <video
         className={styles.videoBg}
         src={recapVideo.src}
+        poster="/photos/barton-springs/hero-1.jpg"
         autoPlay
         loop
         muted

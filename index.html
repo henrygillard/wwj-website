@@ -20,23 +20,103 @@
     <meta name="twitter:description" content="Austin's premier Weezer cover band. Big riffs, bigger harmonies, and an unconditional love for Weezer." />
     <meta name="twitter:image" content="https://wrestlewithjimmy.com/photos/barton-springs/hero-1.jpg" />
 
-    <!-- Structured Data -->
+    <!-- Structured Data: MusicGroup -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "MusicGroup",
+      "@id": "https://wrestlewithjimmy.com/#musicgroup",
       "name": "Wrestle With Jimmy",
       "alternateName": "WWJ",
       "description": "Austin's premier Weezer cover band, bringing the blue album energy to venues, festivals, and events across Texas.",
       "url": "https://wrestlewithjimmy.com",
+      "image": "https://wrestlewithjimmy.com/photos/barton-springs/hero-1.jpg",
+      "logo": "https://wrestlewithjimmy.com/logos/logo-white.png",
       "genre": ["Rock", "Alternative Rock", "Cover Band", "Weezer Tribute", "Weezer Cover Band"],
       "foundingLocation": {
         "@type": "Place",
         "name": "Austin, TX"
       },
-      "areaServed": "Austin, TX",
       "email": "wrestlewithjimmyatx@gmail.com",
       "sameAs": []
+    }
+    </script>
+
+    <!-- Structured Data: WebSite -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "@id": "https://wrestlewithjimmy.com/#website",
+      "name": "Wrestle With Jimmy",
+      "url": "https://wrestlewithjimmy.com",
+      "publisher": {
+        "@id": "https://wrestlewithjimmy.com/#musicgroup"
+      }
+    }
+    </script>
+
+    <!-- Structured Data: Upcoming Events -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "Event",
+          "position": 1,
+          "name": "Wrestle With Jimmy at Meanwhile Brewing Company",
+          "startDate": "2026-05-14",
+          "eventStatus": "https://schema.org/EventScheduled",
+          "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+          "location": {
+            "@type": "Place",
+            "name": "Meanwhile Brewing Company",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Austin",
+              "addressRegion": "TX",
+              "addressCountry": "US"
+            }
+          },
+          "performer": { "@id": "https://wrestlewithjimmy.com/#musicgroup" },
+          "organizer": { "@id": "https://wrestlewithjimmy.com/#musicgroup" },
+          "offers": {
+            "@type": "Offer",
+            "url": "https://www.prekindle.com/event/54592-free-concert-wrestle-with-jimmy-austin",
+            "price": "0",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock"
+          },
+          "url": "https://www.prekindle.com/event/54592-free-concert-wrestle-with-jimmy-austin"
+        },
+        {
+          "@type": "Event",
+          "position": 2,
+          "name": "Wrestle With Jimmy at The Rock-Box",
+          "startDate": "2026-05-23",
+          "eventStatus": "https://schema.org/EventScheduled",
+          "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+          "location": {
+            "@type": "Place",
+            "name": "The Rock-Box",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "San Antonio",
+              "addressRegion": "TX",
+              "addressCountry": "US"
+            }
+          },
+          "performer": { "@id": "https://wrestlewithjimmy.com/#musicgroup" },
+          "organizer": { "@id": "https://wrestlewithjimmy.com/#musicgroup" },
+          "offers": {
+            "@type": "Offer",
+            "url": "https://www.stubwire.com/e/37806/anthem182/therockbox/",
+            "availability": "https://schema.org/InStock"
+          },
+          "url": "https://www.stubwire.com/e/37806/anthem182/therockbox/"
+        }
+      ]
     }
     </script>
 
