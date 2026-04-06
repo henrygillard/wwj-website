@@ -3,8 +3,8 @@ export const logos = {
   whiteTransparent: '/logos/logo-white.png',
 }
 
-// Recap video — served locally
+// Recap video — hosted on S3
 export const recapVideo = {
-  src: '/video/recap.mp4',
+  src: 'https://wwj-video-bucket.s3.us-east-2.amazonaws.com/recap.mp4',
   title: 'WWJ Recap',
 }
