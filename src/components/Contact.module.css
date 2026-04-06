@@ -1,6 +1,5 @@
 .contact {
   padding: 6rem 2rem;
-  background: var(--blue);
   position: relative;
   overflow: hidden;
 }
@@ -11,16 +10,16 @@
   top: -100px; right: -100px;
   width: 400px; height: 400px;
   border-radius: 50%;
-  background: rgba(255, 214, 0, 0.08);
+  background: rgba(0, 87, 168, 0.05);
   pointer-events: none;
 }
 
 .contact :global(.section-label) {
-  color: var(--yellow);
+  color: var(--blue);
 }
 
 .contact :global(.section-title) {
-  color: var(--white);
+  color: var(--dark);
 }
 
 .inner {
@@ -31,7 +30,7 @@
 }
 
 .subtitle {
-  color: rgba(255, 255, 255, 0.7);
+  color: var(--gray);
   font-size: 1.05rem;
   margin-bottom: 2.5rem;
   margin-top: 0.5rem;
@@ -59,7 +58,7 @@
   font-family: 'IBM Plex Mono', monospace;
   font-size: 0.72rem;
   font-weight: 400;
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--gray);
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
@@ -69,9 +68,9 @@
 .group select {
   padding: 0.85rem 1rem;
   border-radius: 6px;
-  border: 2px solid rgba(255, 255, 255, 0.2);
-  background: rgba(255, 255, 255, 0.08);
-  color: var(--white);
+  border: 2px solid var(--border);
+  background: var(--off-white);
+  color: var(--dark);
   font-size: 1rem;
   font-family: 'Barlow', sans-serif;
   transition: border-color 0.2s;
@@ -80,13 +79,13 @@
 
 .group input::placeholder,
 .group textarea::placeholder {
-  color: rgba(255, 255, 255, 0.3);
+  color: var(--gray);
 }
 
 .group input:focus,
 .group textarea:focus,
 .group select:focus {
-  border-color: var(--yellow);
+  border-color: var(--blue);
 }
 
 .group textarea {
@@ -95,8 +94,8 @@
 }
 
 .group select option {
-  background: var(--blue-dark);
-  color: var(--white);
+  background: var(--white);
+  color: var(--dark);
 }
 
 .submit {
@@ -124,7 +123,7 @@
 .errorMsg {
   font-family: 'IBM Plex Mono', monospace;
   font-size: 0.8rem;
-  color: #ffb3b3;
+  color: var(--red);
   letter-spacing: 0.02em;
 }
 
@@ -136,10 +135,10 @@
 .success {
   text-align: center;
   padding: 2rem;
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--blue-light);
   border-radius: 8px;
-  border: 2px solid var(--yellow);
-  color: var(--white);
+  border: 2px solid var(--blue);
+  color: var(--dark);
 }
 
 .successIcon {

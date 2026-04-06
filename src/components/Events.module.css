@@ -1,0 +1,148 @@
+.events {
+  padding: 6rem 2rem;
+}
+
+.inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.header {
+  margin-bottom: 2.5rem;
+}
+
+.list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border-top: 2px solid var(--border);
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 180px 1fr 1fr auto;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem 0;
+  border-bottom: 1px solid var(--border);
+  transition: background 0.15s;
+}
+
+.row:hover {
+  background: var(--off-white);
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  margin-left: -0.75rem;
+  margin-right: -0.75rem;
+  border-radius: 6px;
+}
+
+.upcomingRow .date {
+  color: var(--blue);
+  font-weight: 700;
+}
+
+.pastRow {
+  opacity: 0.7;
+}
+
+.date {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.82rem;
+  color: var(--dark);
+  white-space: nowrap;
+}
+
+.venue {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--dark);
+}
+
+.location {
+  font-size: 0.9rem;
+  color: var(--gray);
+}
+
+.ticketLink {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--white);
+  background: var(--blue);
+  padding: 0.45rem 0.9rem;
+  border-radius: 4px;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background 0.15s;
+}
+
+.ticketLink:hover {
+  background: var(--blue-dark);
+}
+
+.doLink {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.78rem;
+  color: var(--gray);
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color 0.15s;
+}
+
+.doLink:hover {
+  color: var(--blue);
+}
+
+.noShows {
+  padding: 3rem 0;
+  border-top: 2px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.noShows p {
+  color: var(--gray);
+  font-size: 0.95rem;
+  font-style: italic;
+}
+
+.pastHeading {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gray);
+  margin: 3rem 0 0;
+}
+
+@media (max-width: 700px) {
+  .row {
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto;
+  }
+
+  .date {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .venue {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .location {
+    display: none;
+  }
+
+  .ticketLink,
+  .doLink {
+    grid-column: 2;
+    grid-row: 1 / 3;
+    align-self: center;
+  }
+}

@@ -33,6 +33,16 @@ section {
   scroll-margin-top: 64px;
 }
 
+/* Alternating section backgrounds — Hero and About override these via their own class selectors.
+   Wrapping the entire selector in :where() gives it zero specificity, so any .className wins. */
+:where(section:nth-of-type(odd)) {
+  background: var(--white);
+}
+
+:where(section:nth-of-type(even)) {
+  background: var(--blue);
+}
+
 .tape-strip {
   height: 8px;
   background: repeating-linear-gradient(
