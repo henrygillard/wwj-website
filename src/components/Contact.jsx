@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import styles from './Contact.module.css'
+import { CONTACT } from '../data/content'
 
 export default function Contact() {
   const [status, setStatus] = useState('idle') // idle | loading | success | error
@@ -33,59 +34,50 @@ export default function Contact() {
   return (
     <section id="contact" className={styles.contact}>
       <div className={styles.inner}>
-        <p className="section-label">Get in touch</p>
-        <h2 className="section-title">Book Wrestle With Jimmy</h2>
-        <p className={styles.subtitle}>
-          Want us at your venue, festival, or backyard birthday party? We're in.
-          Send us a message.
-        </p>
+        <p className="section-label">{CONTACT.sectionLabel}</p>
+        <h2 className="section-title">{CONTACT.heading}</h2>
+        <p className={styles.subtitle}>{CONTACT.subtitle}</p>
 
         {status === 'success' ? (
           <div className={styles.success}>
             <p className={styles.successIcon}>🎸</p>
-            <p>
-              <strong>Message sent!</strong> We'll get back to you soon.
-            </p>
+            <p>{CONTACT.successMessage}</p>
           </div>
         ) : (
           <form className={styles.form} onSubmit={handleSubmit}>
             <div className={styles.row}>
               <div className={styles.group}>
-                <label htmlFor="name">Your name</label>
-                <input id="name" name="name" type="text" placeholder="Rivers Cuomo" required />
+                <label htmlFor="name">{CONTACT.nameLabel}</label>
+                <input id="name" name="name" type="text" placeholder={CONTACT.namePlaceholder} required />
               </div>
               <div className={styles.group}>
-                <label htmlFor="email">Email</label>
-                <input id="email" name="email" type="email" placeholder="you@example.com" required />
+                <label htmlFor="email">{CONTACT.emailLabel}</label>
+                <input id="email" name="email" type="email" placeholder={CONTACT.emailPlaceholder} required />
               </div>
             </div>
             <div className={styles.group}>
-              <label htmlFor="inquiry">Type of inquiry</label>
+              <label htmlFor="inquiry">{CONTACT.inquiryLabel}</label>
               <select id="inquiry" name="inquiry">
-                <option value="">Select one...</option>
-                <option value="Booking / Show">Booking / Show</option>
-                <option value="Festival / Event">Festival / Event</option>
-                <option value="Private Party">Private Party</option>
-                <option value="Press / Media">Press / Media</option>
-                <option value="Other">Other</option>
+                <option value="">{CONTACT.inquiryPlaceholder}</option>
+                {CONTACT.inquiryOptions.map((opt) => (
+                  <option key={opt} value={opt}>{opt}</option>
+                ))}
               </select>
             </div>
             <div className={styles.group}>
-              <label htmlFor="message">Message</label>
+              <label htmlFor="message">{CONTACT.messageLabel}</label>
               <textarea
                 id="message"
                 name="message"
-                placeholder="Tell us about your event, venue, date..."
+                placeholder={CONTACT.messagePlaceholder}
                 required
               />
             </div>
             {status === 'error' && (
-              <p className={styles.errorMsg}>
-                Something went wrong — please try again or email us directly.
-              </p>
+              <p className={styles.errorMsg}>{CONTACT.errorMessage}</p>
             )}
             <button type="submit" className={styles.submit} disabled={status === 'loading'}>
-              {status === 'loading' ? 'Sending...' : 'Send It →'}
+              {status === 'loading' ? CONTACT.loadingButton : CONTACT.submitButton}
             </button>
           </form>
         )}

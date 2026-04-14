@@ -1,5 +1,6 @@
 import styles from './Hero.module.css'
 import { recapVideo } from '../data/assets'
+import { HERO } from '../data/content'
 
 export default function Hero() {
   return (
@@ -14,25 +15,28 @@ export default function Hero() {
         playsInline
       />
       <div className={styles.content}>
-        <p className={styles.eyebrow}>Austin, TX · Weezer Cover Band</p>
-        <h1 className={styles.title} aria-label="Wrestle With Jimmy">
-          W<span className={styles.accent}>W</span>J
+        <p className={styles.eyebrow}>{HERO.eyebrow}</p>
+        <h1 className={styles.title}>
+          {HERO.title.split('').map((char, i) =>
+            i === 1 ? <span key={i} className={styles.accent}>{char}</span> : char
+          )}
+          <span className={styles.visuallyHidden}> — {HERO.titleScreenReader}</span>
         </h1>
         <p className={styles.subtitle}>
-          Playing the songs that <strong>defined a generation</strong>
+          {HERO.subtitleLine1}
           <br />
-          loud, proud, and slightly nerdy
+          {HERO.subtitleLine2}
         </p>
         <div className={styles.cta}>
-          <a href="#gallery" className={`${styles.btn} ${styles.btnYellow}`}>
-            See Photos
+          <a href={HERO.cta1Link} className={`${styles.btn} ${styles.btnYellow}`}>
+            {HERO.cta1Label}
           </a>
-          <a href="#contact" className={`${styles.btn} ${styles.btnOutline}`}>
-            Book Us
+          <a href={HERO.cta2Link} className={`${styles.btn} ${styles.btnOutline}`}>
+            {HERO.cta2Label}
           </a>
         </div>
       </div>
-      <p className={styles.scrollHint}>scroll ↓</p>
+      <p className={styles.scrollHint}>{HERO.scrollHint}</p>
     </section>
   )
 }

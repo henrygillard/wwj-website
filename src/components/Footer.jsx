@@ -1,4 +1,5 @@
 import styles from './Footer.module.css'
+import { FOOTER } from '../data/content'
 
 export default function Footer() {
   return (
@@ -6,7 +7,7 @@ export default function Footer() {
       <div className={styles.logo}>
         W<span>W</span>J
       </div>
-      <p className={styles.tagline}>Austin's Weezer tribute band — available for bookings in Austin, TX and surrounding areas.</p>
+      <p className={styles.tagline}>{FOOTER.tagline}</p>
       <nav className={styles.links}>
         <a href="#about">About</a>
         <a href="#gallery">Gallery</a>

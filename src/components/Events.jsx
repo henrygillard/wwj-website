@@ -1,5 +1,6 @@
 import styles from './Events.module.css'
 import { EVENTS } from '../data/events'
+import { SHOWS } from '../data/content'
 
 const FORMAT = new Intl.DateTimeFormat('en-US', {
   weekday: 'short',
@@ -21,8 +22,8 @@ export default function Events() {
     <section id="events" className={styles.events}>
       <div className={styles.inner}>
         <div className={styles.header}>
-          <p className="section-label">Shows</p>
-          <h2 className="section-title">Upcoming Shows</h2>
+          <p className="section-label">{SHOWS.sectionLabel}</p>
+          <h2 className="section-title">{SHOWS.heading}</h2>
         </div>
 
         {upcoming.length > 0 ? (
@@ -33,20 +34,20 @@ export default function Events() {
                 <span className={styles.venue}>{e.venue}</span>
                 <span className={styles.location}>{e.location}</span>
                 <a href={e.url} target="_blank" rel="noopener noreferrer" className={styles.ticketLink}>
-                  Get Tickets →
+                  {SHOWS.ticketLinkLabel}
                 </a>
               </li>
             ))}
           </ul>
         ) : (
           <div className={styles.noShows}>
-            <p>No upcoming shows scheduled — check back soon or follow us on social for announcements.</p>
+            <p>{SHOWS.noShowsMessage}</p>
           </div>
         )}
 
         {past.length > 0 && (
           <>
-            <h3 className={styles.pastHeading}>Past Shows</h3>
+            <h3 className={styles.pastHeading}>{SHOWS.pastHeading}</h3>
             <ul className={styles.list}>
               {past.map((e) => (
                 <li key={e.date + e.venue} className={`${styles.row} ${styles.pastRow}`}>
@@ -54,7 +55,7 @@ export default function Events() {
                   <span className={styles.venue}>{e.venue}</span>
                   <span className={styles.location}>{e.location}</span>
                   <a href={e.url} target="_blank" rel="noopener noreferrer" className={styles.doLink}>
-                    View on Do512 →
+                    {SHOWS.pastLinkLabel}
                   </a>
                 </li>
               ))}

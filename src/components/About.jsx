@@ -1,12 +1,5 @@
 import styles from './About.module.css'
-
-
-const STATS = [
-  { number: '10+', label: 'Venues played' },
-  { number: 'ATX', label: 'Based in Austin' },
-  { number: '∞', label: 'Weezer songs known' },
-  { number: '0', label: 'Undone sweaters' },
-]
+import { ABOUT } from '../data/content'
 
 const hero1 = '/photos/barton-springs/hero-1.jpg'
 const hero2 = '/photos/barton-springs/hero-2.jpg'
@@ -17,22 +10,12 @@ export default function About({ onOpenPhoto }) {
     <section id="about" className={styles.about}>
       <div className={styles.inner}>
         <div className={styles.text}>
-          <p className="section-label">Who we are</p>
-          <h2 className="section-title">We are Wrestle With Jimmy.</h2>
-          <p>
-            Wrestle With Jimmy is Austin's premier Weezer cover band, bringing the blue album
-            energy to venues, festivals, and basements across the city. From
-            Buddy Holly to Undone, we play the songs that made a generation of
-            kids feel like it was okay to be a little weird.
-          </p>
-          <p>
-            Whether you caught us at Central Machine Works, Brisketfest,
-            Independence Brewing, or Radio East — you already know what it's
-            about. Big riffs, bigger harmonies, and an unconditional love for
-            Weezer.
-          </p>
+          <p className="section-label">{ABOUT.sectionLabel}</p>
+          <h2 className="section-title">{ABOUT.heading}</h2>
+          <p>{ABOUT.paragraph1}</p>
+          <p>{ABOUT.paragraph2}</p>
           <div className={styles.stats}>
-            {STATS.map((s) => (
+            {ABOUT.stats.map((s) => (
               <div key={s.label} className={styles.statCard}>
                 <div className={styles.statNumber}>{s.number}</div>
                 <div className={styles.statLabel}>{s.label}</div>
