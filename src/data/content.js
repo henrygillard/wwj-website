@@ -3,7 +3,7 @@
 
 export const HERO = {
   "eyebrow": "Austin, TX · Weezer Cover Band",
-  "title": "PENIS!!",
+  "title": "WWJ",
   "titleScreenReader": "WWJ — Wrestle With Jimmy",
   "subtitleLine1": "Playing the songs that defined a generation",
   "subtitleLine2": "loud, proud, and slightly nerdy",
