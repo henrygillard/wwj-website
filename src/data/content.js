@@ -112,6 +112,11 @@ export const FOOTER = {
   "tagline": "Austin's Weezer tribute band — available for bookings in Austin, TX and surrounding areas."
 }
 
+export const GALLERY = {
+  "sectionLabel": "Photos",
+  "heading": "Live Photos"
+}
+
 export const SHOWS = {
   "sectionLabel": "Shows",
   "heading": "Upcoming Shows",

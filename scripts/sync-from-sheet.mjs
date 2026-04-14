@@ -33,7 +33,7 @@ async function main() {
   })
   const sheets = google.sheets({ version: 'v4', auth })
 
-  const [heroRows, aboutRows, testimonialsRows, showsRows, contactRows, footerNavRows] =
+  const [heroRows, aboutRows, testimonialsRows, showsRows, contactRows, footerNavRows, photosRows] =
     await Promise.all([
       readTab(sheets, 'Hero!A:B'),
       readTab(sheets, 'About!A:B'),
@@ -41,6 +41,7 @@ async function main() {
       readTab(sheets, 'Shows!A:E'),
       readTab(sheets, 'Contact!A:B'),
       readTab(sheets, 'Footer & Nav!A:C'),
+      readTab(sheets, 'Photos!A:C'),
     ])
 
   // Shows tab: data rows (have 5 columns) vs section label rows (2 columns, col A doesn't start with a date)
@@ -153,6 +154,24 @@ async function main() {
     tagline: footerKV['Tagline'],
   }
 
+  // --- Photos ---
+  // Data rows: col A starts with '/' (a path or URL)
+  // Metadata rows: col A is a plain label key, col B is the value
+  const photoItems = []
+  const photoMeta = {}
+  for (const row of photosRows.slice(1)) {
+    if (!row[0]) continue
+    if (row[0].startsWith('/') || row[0].startsWith('http')) {
+      photoItems.push({ src: row[0], alt: row[1] ?? '', group: row[2] ?? '' })
+    } else if (row[1]) {
+      photoMeta[row[0]] = row[1]
+    }
+  }
+  const GALLERY = {
+    sectionLabel: photoMeta['Section label'] ?? 'Photos',
+    heading: photoMeta['Section heading'] ?? 'Live Photos',
+  }
+
   // Write content.js
   const contentJs =
     `// Auto-generated — do not edit by hand.\n` +
@@ -162,10 +181,20 @@ async function main() {
     `export const TESTIMONIALS = ${JSON.stringify(TESTIMONIALS, null, 2)}\n\n` +
     `export const CONTACT = ${JSON.stringify(CONTACT, null, 2)}\n\n` +
     `export const FOOTER = ${JSON.stringify(FOOTER, null, 2)}\n\n` +
-    `export const SHOWS = ${JSON.stringify(SHOWS, null, 2)}\n`
+    `export const SHOWS = ${JSON.stringify(SHOWS, null, 2)}\n\n` +
+    `export const GALLERY = ${JSON.stringify(GALLERY, null, 2)}\n`
 
   writeFileSync(resolve(__dirname, '../src/data/content.js'), contentJs)
   console.log('✓ src/data/content.js updated')
+
+  // Write photos.js
+  const photosJs =
+    `// Auto-generated — do not edit by hand.\n` +
+    `// Run \`npm run sync-content\` to pull updates from Google Sheets.\n\n` +
+    `export const allPhotos = ${JSON.stringify(photoItems, null, 2)}\n`
+
+  writeFileSync(resolve(__dirname, '../src/data/photos.js'), photosJs)
+  console.log('✓ src/data/photos.js updated')
 
   // --- Shows data ---
   const EVENTS = showsDataRows.map(([date, venue, location, url, upcoming]) => ({

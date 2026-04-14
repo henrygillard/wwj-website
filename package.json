@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "sync-content": "node scripts/sync-from-sheet.mjs",
-    "sync-and-deploy": "node scripts/sync-from-sheet.mjs && git add src/data/content.js src/data/events.js && git diff --staged --quiet || git commit -m 'sync content from sheet' && git push",
+    "sync-and-deploy": "node scripts/sync-from-sheet.mjs && git add src/data/content.js src/data/events.js src/data/photos.js && git diff --staged --quiet || git commit -m 'sync content from sheet' && git push && git push heroku main",
     "build": "vite build && vite build --config vite.config.ssr.js && node scripts/prerender.mjs",
     "preview": "vite preview",
     "heroku-postbuild": "npm run build",

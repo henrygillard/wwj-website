@@ -1,6 +1,7 @@
 import { useState, useMemo } from 'react'
 import styles from './Gallery.module.css'
 import { allPhotos } from '../data/photos'
+import { GALLERY } from '../data/content'
 
 const PAGE_SIZE = 10
 
@@ -20,8 +21,8 @@ export default function Gallery({ onOpenPhoto }) {
   return (
     <section id="gallery" className={styles.gallery}>
       <div className={styles.header}>
-        <p className="section-label">Photos</p>
-        <h2 className="section-title">Live Photos</h2>
+        <p className="section-label">{GALLERY.sectionLabel}</p>
+        <h2 className="section-title">{GALLERY.heading}</h2>
       </div>
 
       <div className={styles.grid}>
