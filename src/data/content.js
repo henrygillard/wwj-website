@@ -3,7 +3,7 @@
 
 export const HERO = {
   "eyebrow": "Austin, TX · Weezer Cover Band",
-  "title": "WWJ!!",
+  "title": "PENIS!!",
   "titleScreenReader": "WWJ — Wrestle With Jimmy",
   "subtitleLine1": "Playing the songs that defined a generation",
   "subtitleLine2": "loud, proud, and slightly nerdy",
@@ -87,8 +87,12 @@ export const CONTACT = {
   "sectionLabel": "Get in touch",
   "heading": "Book Wrestle With Jimmy",
   "subtitle": "Want us at your venue, festival, or backyard birthday party? We're in. Send us a message.",
+  "nameLabel": "Your name",
   "namePlaceholder": "Rivers Cuomo",
+  "emailLabel": "Email",
   "emailPlaceholder": "you@example.com",
+  "inquiryLabel": "Type of inquiry",
+  "inquiryPlaceholder": "Select one...",
   "inquiryOptions": [
     "Booking / Show",
     "Festival / Event",
@@ -96,12 +100,23 @@ export const CONTACT = {
     "Press / Media",
     "Other"
   ],
+  "messageLabel": "Message",
   "messagePlaceholder": "Tell us about your event, venue, date...",
   "submitButton": "Send It →",
+  "loadingButton": "Sending...",
   "successMessage": "Message sent! We'll get back to you soon.",
   "errorMessage": "Something went wrong — please try again or email us directly."
 }
 
 export const FOOTER = {
   "tagline": "Austin's Weezer tribute band — available for bookings in Austin, TX and surrounding areas."
+}
+
+export const SHOWS = {
+  "sectionLabel": "Shows",
+  "heading": "Upcoming Shows",
+  "pastHeading": "Past Shows",
+  "noShowsMessage": "No upcoming shows scheduled — check back soon or follow us on social for announcements.",
+  "ticketLinkLabel": "Get Tickets →",
+  "pastLinkLabel": "View on Do512 →"
 }
