@@ -17,7 +17,7 @@ export const HERO = {
 export const ABOUT = {
   "sectionLabel": "Who we are",
   "heading": "We are Wrestle With Jimmy.",
-  "paragraph1": "Wrestle With Jimmy is Austin's premier Weezer cover band, bringing the blue album energy to venues, festivals, and basements across the city. From Buddy Holly to Undone, we play the songs that made a generation of kids feel like it was okay to be a little weird.",
+  "paragraph1": "Wrestle With Jimmy is Austin's premier Weezer cover band, bringing the blue album energy to venues, festivals, and basements across the city. From Buddy Holly to Undone, we play the songs that made a generation of kids feel like it was okay to be a little weird. And your mom is a hoe.",
   "paragraph2": "Whether you caught us at Central Machine Works, Brisketfest, Independence Brewing, or Radio East — you already know what it's about. Big riffs, bigger harmonies, and an unconditional love for Weezer.",
   "stats": [
     {
@@ -112,11 +112,6 @@ export const FOOTER = {
   "tagline": "Austin's Weezer tribute band — available for bookings in Austin, TX and surrounding areas."
 }
 
-export const GALLERY = {
-  "sectionLabel": "Photos",
-  "heading": "Live Photos"
-}
-
 export const SHOWS = {
   "sectionLabel": "Shows",
   "heading": "Upcoming Shows",
@@ -124,4 +119,9 @@ export const SHOWS = {
   "noShowsMessage": "No upcoming shows scheduled — check back soon or follow us on social for announcements.",
   "ticketLinkLabel": "Get Tickets →",
   "pastLinkLabel": "View on Do512 →"
+}
+
+export const GALLERY = {
+  "sectionLabel": "Photos",
+  "heading": "Live Photos"
 }
