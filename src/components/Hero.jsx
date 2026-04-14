@@ -16,11 +16,10 @@ export default function Hero() {
       />
       <div className={styles.content}>
         <p className={styles.eyebrow}>{HERO.eyebrow}</p>
-        <h1 className={styles.title}>
+        <h1 className={styles.title} aria-label={HERO.titleScreenReader}>
           {HERO.title.split('').map((char, i) =>
-            i === 1 ? <span key={i} className={styles.accent}>{char}</span> : char
+            i === 1 ? <span key={i} className={styles.accent} aria-hidden="true">{char}</span> : char
           )}
-          <span className={styles.visuallyHidden}> — {HERO.titleScreenReader}</span>
         </h1>
         <p className={styles.subtitle}>
           {HERO.subtitleLine1}
