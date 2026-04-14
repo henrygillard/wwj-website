@@ -7,7 +7,7 @@ export const HERO = {
   "titleScreenReader": "WWJ — Wrestle With Jimmy",
   "subtitleLine1": "Playing the songs that defined a generation",
   "subtitleLine2": "loud, proud, and slightly nerdy",
-  "cta1Label": "CTA Button 1",
+  "cta1Label": "See Photos",
   "cta1Link": "#gallery",
   "cta2Label": "Book Us",
   "cta2Link": "#contact",
