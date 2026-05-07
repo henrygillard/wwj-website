@@ -24,7 +24,7 @@ app.post('/api/contact', async (req, res) => {
     service: 'gmail',
     auth: {
       user: process.env.GMAIL_USER,
-      pass: process.env.GMAIL_PASS,
+      pass: process.env.GMAIL_APP_PASSWORD,
     },
   })
 
@@ -33,7 +33,7 @@ app.post('/api/contact', async (req, res) => {
   try {
     await transporter.sendMail({
       from: `"WWJ Website" <${process.env.GMAIL_USER}>`,
-      to: 'wrestlewithjimmyatx@gmail.com',
+      to: process.env.GMAIL_USER,
       replyTo: `"${name}" <${email}>`,
       subject: `[WWJ Booking] ${inquiryLabel} — ${name}`,
       text: [
