@@ -1,4 +1,4 @@
-import { useState, useMemo } from 'react'
+import { useState, useEffect } from 'react'
 import styles from './Gallery.module.css'
 import { allPhotos } from '../data/photos'
 import { GALLERY } from '../data/content'
@@ -15,8 +15,9 @@ function shuffle(arr) {
 }
 
 export default function Gallery({ onOpenPhoto }) {
-  const photos = useMemo(() => shuffle(allPhotos), [])
+  const [photos, setPhotos] = useState(allPhotos)
   const [visible, setVisible] = useState(PAGE_SIZE)
+  useEffect(() => { setPhotos(shuffle(allPhotos)) }, [])
 
   return (
     <section id="gallery" className={styles.gallery}>
