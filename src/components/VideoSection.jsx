@@ -13,6 +13,7 @@ export default function VideoSection() {
             poster="/photos/barton-springs/hero-1.jpg"
             title={recapVideo.title}
             controls
+            preload="none"
             className={styles.embed}
           />
         </div>
