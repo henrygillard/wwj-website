@@ -347,17 +347,17 @@ locations. Note MusicGroup url as an acknowledged deviation in the plan comment.
 
 ---
 
-## Open Questions
+## Open Questions (RESOLVED)
 
 1. **What is the Rock-Box ticket price?**
    - What we know: The Stubwire URL is `https://www.stubwire.com/e/37806/anthem182/therockbox/`. Events.js has no price field.
    - What's unclear: Whether the show is free, $5, $10, or another amount.
-   - Recommendation: The plan task for SCHEMA-02 must include a step: "Check the Stubwire ticket URL and record the price. Use that value for the `price` field. Use `"USD"` for `priceCurrency`." If the event is free, use `"0"`.
+   - **Resolution:** Handled in 02-01-PLAN.md Task 1 — the executor fetches the Stubwire URL and records the actual price before writing the JSON-LD edit. If the event is confirmed free, uses `"0"`.
 
 2. **Should MusicGroup `"url"` also get a trailing slash?**
    - What we know: SCHEMA-03 does not list MusicGroup url. The current value is `https://wrestlewithjimmy.com`.
    - What's unclear: Whether this was intentional or an oversight in the requirement.
-   - Recommendation: Normalize it for consistency in the same edit, noting it exceeds the strict requirement scope. Low risk.
+   - **Resolution:** Decided as out-of-scope in 02-01-PLAN.md Task 2 — follow SCHEMA-03 verbatim (only canonical, og:url, WebSite url). MusicGroup url left unchanged.
 
 ---
 

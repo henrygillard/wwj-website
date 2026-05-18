@@ -3,24 +3,24 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: SEO & Booking Conversion
 status: executing
-last_updated: "2026-05-18T04:52:42.035Z"
-last_activity: 2026-05-17 — Phase 1 planned (1 plan, 2 tasks)
+last_updated: "2026-05-18T00:00:00.000Z"
+last_activity: 2026-05-18 — Phase 2 planned (2 plans, 4 tasks)
 progress:
   total_phases: 5
   completed_phases: 1
-  total_plans: 1
+  total_plans: 3
   completed_plans: 1
-  percent: 100
+  percent: 20
 ---
 
 # Project State
 
 ## Current Position
 
-Phase: 1 — Security & Server Hardening (complete)
-Plan: 01-01-PLAN.md (1/1 plans complete)
-Status: Phase 1 complete — ready to execute Phase 2
-Last activity: 2026-05-17 — Phase 1 executed (2 tasks, SEC-01 through SEC-04 satisfied)
+Phase: 2 — Schema, Technical & Quick Fixes (ready to execute)
+Plans: 02-01-PLAN.md (Wave 1), 02-02-PLAN.md (Wave 2)
+Status: Phase 2 planned — ready to execute
+Last activity: 2026-05-18 — Phase 2 planned (2 plans, 4 tasks: SCHEMA-01 through SCHEMA-04, PERF-05 through PERF-07)
 
 ## Progress Bar
 
@@ -33,7 +33,7 @@ Last activity: 2026-05-17 — Phase 1 executed (2 tasks, SEC-01 through SEC-04 s
 | Phase | Name | Status |
 |-------|------|--------|
 | 1 | Security & Server Hardening | Complete |
-| 2 | Schema, Technical & Quick Fixes | Not started |
+| 2 | Schema, Technical & Quick Fixes | Ready to execute |
 | 3 | Image Performance & CWV | Not started |
 | 4 | Content & Booking Conversion | Not started |
 | 5 | Entity Authority & GEO | Not started |
@@ -60,4 +60,6 @@ Last activity: 2026-05-17 — Phase 1 executed (2 tasks, SEC-01 through SEC-04 s
 
 - Content flows through Google Sheet → sync script → src/data/*.js — text changes should go through the sheet, not direct file edits
 - Images in public/photos/ must be replaced in-place (WebP replacing JPEG) to avoid server path changes
-- prerender.mjs is the source of truth for JSON-LD generation; schema changes go there
+- prerender.mjs only injects SSR body HTML — it does NOT generate JSON-LD; for Phase 2, schema changes go directly in index.html (dynamic generation deferred to Phase 5 / GEO-04)
+- [Phase 2] JSON-LD is hardcoded in index.html head; sitemap.xml already had the trailing slash
+- [Phase 2] Rock-Box ticket price must be looked up from Stubwire URL before writing SCHEMA-02 edit
