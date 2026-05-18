@@ -8,7 +8,7 @@
 ## Phases
 
 - [x] **Phase 1: Security & Server Hardening** - Harden the Express server with security headers, rate limiting, input escaping, and correct long-term caching for hashed assets
-- [ ] **Phase 2: Schema, Technical & Quick Fixes** - Fix all stale/broken structured data, resolve llms.txt accuracy, add video preload, fix gallery CLS, and add favicon
+- [x] **Phase 2: Schema, Technical & Quick Fixes** - Fix all stale/broken structured data, resolve llms.txt accuracy, add video preload, fix gallery CLS, and add favicon (completed 2026-05-18)
 - [ ] **Phase 3: Image Performance & CWV** - Compress the entire image library to WebP, add all missing image dimensions, and add the LCP preload hint
 - [ ] **Phase 4: Content & Booking Conversion** - Transform the site into a booking-conversion page with expanded copy, real testimonials, band member info, and 600+ word count
 - [ ] **Phase 5: Entity Authority & GEO** - Establish Wrestle With Jimmy as a verifiable entity across the web with sameAs schema, expanded llms.txt, automated sitemap, and dynamic event schema
@@ -47,7 +47,7 @@ Plans:
 
 Plans:
 - [x] 02-01-PLAN.md — Schema fixes: remove past Meanwhile Brewing event, add Rock-Box price/priceCurrency, add trailing slash to canonical/og:url/WebSite url, remove May 14 from llms.txt (SCHEMA-01, SCHEMA-02, SCHEMA-03, SCHEMA-04)
-- [ ] 02-02-PLAN.md — Technical fixes: add preload="none" to both video elements, move Gallery shuffle to useEffect, create favicon.png and declare in index.html (PERF-05, PERF-06, PERF-07)
+- [x] 02-02-PLAN.md — Technical fixes: add preload="none" to both video elements, move Gallery shuffle to useEffect, create favicon.png and declare in index.html (PERF-05, PERF-06, PERF-07)
 
 ### Phase 3: Image Performance & CWV
 **Goal**: Every image on the site is a compressed WebP file that loads fast, and every img element has explicit dimensions so layout never shifts during page load
@@ -60,8 +60,11 @@ Plans:
   2. All 32+ gallery and about-section images are WebP files under 120KB each (verified by file size scan)
   3. Lighthouse CLS score is 0 or near-0 — no layout shift is triggered by image load across Gallery, About, or Nav
   4. index.html contains a `<link rel="preload">` for the hero image with fetchpriority="high"
-**Plans**: TBD
-**UI hint**: yes
+**Plans**: 2 plans
+
+Plans:
+- [ ] 03-01-PLAN.md — Install sharp, write verify-images.mjs scaffold and convert-images.mjs; convert all 35 JPEGs to WebP with resize; update photos.js with .webp paths and width/height fields; delete originals (PERF-01, PERF-02)
+- [ ] 03-02-PLAN.md — Patch Gallery.jsx, About.jsx, Nav.jsx img attrs; update Hero.jsx/VideoSection.jsx poster paths; update About.module.css background path; add LCP preload + update 3 og/schema paths in index.html; patch sync-from-sheet.mjs (PERF-03, PERF-04)
 
 ### Phase 4: Content & Booking Conversion
 **Goal**: An event booker landing on the site finds a credible, complete booking page — with detailed booking copy, real venue testimonials, named band members, accurate stats, and complete navigation
@@ -100,11 +103,11 @@ Plans:
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Security & Server Hardening | 1/1 | Complete | 2026-05-17 |
-| 2. Schema, Technical & Quick Fixes | 1/2 | In progress | - |
-| 3. Image Performance & CWV | 0/? | Not started | - |
+| 2. Schema, Technical & Quick Fixes | 2/2 | Complete   | 2026-05-18 |
+| 3. Image Performance & CWV | 0/2 | Not started | - |
 | 4. Content & Booking Conversion | 0/? | Not started | - |
 | 5. Entity Authority & GEO | 0/? | Not started | - |
 
 ---
 *Roadmap created: 2026-05-17*
-*Last updated: 2026-05-18 after 02-01 completed (SCHEMA-01 through SCHEMA-04)*
+*Last updated: 2026-05-18 — Phase 3 plans created (03-01, 03-02)*
