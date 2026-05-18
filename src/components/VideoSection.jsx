@@ -10,7 +10,7 @@ export default function VideoSection() {
         <div className={styles.embedWrapper}>
           <video
             src={recapVideo.src}
-            poster="/photos/barton-springs/hero-1.jpg"
+            poster="/photos/barton-springs/hero-1.webp"
             title={recapVideo.title}
             controls
             preload="none"
