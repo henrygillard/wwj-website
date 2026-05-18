@@ -15,7 +15,7 @@ export const EVENTS = [
     "venue": "Meanwhile Brewing Company",
     "location": "Austin, TX",
     "url": "https://www.prekindle.com/event/54592-free-concert-wrestle-with-jimmy-austin",
-    "upcoming": true
+    "upcoming": false
   },
   {
     "date": "2026-02-27",
