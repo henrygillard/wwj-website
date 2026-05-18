@@ -1,31 +1,31 @@
 ---
 gsd_state_version: 1.0
 milestone: v1.0
-milestone_name: SEO & Booking Conversion
+milestone_name: milestone
 status: executing
 last_updated: "2026-05-18T00:00:00.000Z"
-last_activity: 2026-05-18 — Phase 2 planned (2 plans, 4 tasks)
+last_activity: "2026-05-18 — Completed 02-01-PLAN.md — SCHEMA-01 through SCHEMA-04 satisfied"
 progress:
   total_phases: 5
   completed_phases: 1
   total_plans: 3
-  completed_plans: 1
-  percent: 20
+  completed_plans: 2
+  percent: 40
 ---
 
 # Project State
 
 ## Current Position
 
-Phase: 2 — Schema, Technical & Quick Fixes (ready to execute)
-Plans: 02-01-PLAN.md (Wave 1), 02-02-PLAN.md (Wave 2)
-Status: Phase 2 planned — ready to execute
-Last activity: 2026-05-18 — Phase 2 planned (2 plans, 4 tasks: SCHEMA-01 through SCHEMA-04, PERF-05 through PERF-07)
+Phase: 2 — Schema, Technical & Quick Fixes (in progress)
+Plans: 02-01-PLAN.md (Wave 1 — Complete), 02-02-PLAN.md (Wave 2 — Ready)
+Status: 02-01 complete — SCHEMA-01 through SCHEMA-04 satisfied
+Last activity: 2026-05-18 — Completed 02-01-PLAN.md (SCHEMA-01, SCHEMA-02, SCHEMA-03, SCHEMA-04)
 
 ## Progress Bar
 
 ```
-[████░░░░░░░░░░░░░░░░] 20% — 1/5 phases complete
+[████░░░░░░░░░░░░░░░░] 40% — 1/5 phases complete, 2/3 plans done
 ```
 
 ## Phase Status
@@ -33,7 +33,7 @@ Last activity: 2026-05-18 — Phase 2 planned (2 plans, 4 tasks: SCHEMA-01 throu
 | Phase | Name | Status |
 |-------|------|--------|
 | 1 | Security & Server Hardening | Complete |
-| 2 | Schema, Technical & Quick Fixes | Ready to execute |
+| 2 | Schema, Technical & Quick Fixes | In progress (02-01 complete) |
 | 3 | Image Performance & CWV | Not started |
 | 4 | Content & Booking Conversion | Not started |
 | 5 | Entity Authority & GEO | Not started |
@@ -63,3 +63,5 @@ Last activity: 2026-05-18 — Phase 2 planned (2 plans, 4 tasks: SCHEMA-01 throu
 - prerender.mjs only injects SSR body HTML — it does NOT generate JSON-LD; for Phase 2, schema changes go directly in index.html (dynamic generation deferred to Phase 5 / GEO-04)
 - [Phase 2] JSON-LD is hardcoded in index.html head; sitemap.xml already had the trailing slash
 - [Phase 2] Rock-Box ticket price must be looked up from Stubwire URL before writing SCHEMA-02 edit
+- [Phase 2 — 02-01] Used Stubwire embedded JSON-LD price (10.25) as source of truth for Rock-Box Offer block
+- [Phase 2 — 02-01] MusicGroup url intentionally left without trailing slash — SCHEMA-03 scope is canonical, og:url, WebSite url only

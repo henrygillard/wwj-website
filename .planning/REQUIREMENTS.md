@@ -15,10 +15,10 @@
 
 ### Schema
 
-- [ ] **SCHEMA-01**: The May 14 Meanwhile Brewing event is removed from the JSON-LD ItemList (it is a past event)
-- [ ] **SCHEMA-02**: The Rock-Box event Offer block includes price and priceCurrency fields
-- [ ] **SCHEMA-03**: Canonical tag, og:url, WebSite schema url, and sitemap <loc> all use https://wrestlewithjimmy.com/ (trailing slash, consistent)
-- [ ] **SCHEMA-04**: llms.txt Upcoming Shows section no longer lists the May 14 show
+- [x] **SCHEMA-01**: The May 14 Meanwhile Brewing event is removed from the JSON-LD ItemList (it is a past event)
+- [x] **SCHEMA-02**: The Rock-Box event Offer block includes price and priceCurrency fields
+- [x] **SCHEMA-03**: Canonical tag, og:url, WebSite schema url, and sitemap <loc> all use https://wrestlewithjimmy.com/ (trailing slash, consistent)
+- [x] **SCHEMA-04**: llms.txt Upcoming Shows section no longer lists the May 14 show
 
 ### Performance
 
@@ -90,10 +90,10 @@
 | SEC-02 | Phase 1 | Complete ✓ |
 | SEC-03 | Phase 1 | Complete ✓ |
 | SEC-04 | Phase 1 | Complete ✓ |
-| SCHEMA-01 | Phase 2 | Pending |
-| SCHEMA-02 | Phase 2 | Pending |
-| SCHEMA-03 | Phase 2 | Pending |
-| SCHEMA-04 | Phase 2 | Pending |
+| SCHEMA-01 | Phase 2 | Complete |
+| SCHEMA-02 | Phase 2 | Complete |
+| SCHEMA-03 | Phase 2 | Complete |
+| SCHEMA-04 | Phase 2 | Complete |
 | PERF-01 | Phase 3 | Pending |
 | PERF-02 | Phase 3 | Pending |
 | PERF-03 | Phase 3 | Pending |
