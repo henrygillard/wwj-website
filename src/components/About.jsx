@@ -1,8 +1,8 @@
 import styles from './About.module.css'
 import { ABOUT } from '../data/content'
 
-const hero1 = '/photos/barton-springs/hero-1.jpg'
-const hero2 = '/photos/barton-springs/hero-2.jpg'
+const hero1 = '/photos/barton-springs/hero-1.webp'
+const hero2 = '/photos/barton-springs/hero-2.webp'
 
 export default function About({ onOpenPhoto }) {
 
@@ -28,12 +28,16 @@ export default function About({ onOpenPhoto }) {
           <img
             src={hero1}
             alt="Wrestle With Jimmy performing live in Austin, TX"
+            width={600}
+            height={900}
             loading="lazy"
             onClick={() => onOpenPhoto(hero1)}
           />
           <img
             src={hero2}
             alt="Wrestle With Jimmy on stage at a Weezer tribute show"
+            width={1200}
+            height={1800}
             loading="lazy"
             onClick={() => onOpenPhoto(hero2)}
           />
