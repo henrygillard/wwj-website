@@ -6,7 +6,7 @@
  */
 
 import { google } from 'googleapis'
-import { writeFileSync } from 'node:fs'
+import { writeFileSync, readFileSync, existsSync } from 'node:fs'
 import { resolve, dirname } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import 'dotenv/config'
@@ -187,13 +187,32 @@ async function main() {
   writeFileSync(resolve(__dirname, '../src/data/content.js'), contentJs)
   console.log('✓ src/data/content.js updated')
 
+  // Preserve width/height dimensions set by convert-images.mjs — the sheet has no dimension data.
+  const photosJsPath = resolve(__dirname, '../src/data/photos.js')
+  const dimMap = {}
+  if (existsSync(photosJsPath)) {
+    const existing = readFileSync(photosJsPath, 'utf-8')
+    const match = existing.match(/export const allPhotos = (\[[\s\S]*\])/)
+    if (match) {
+      try {
+        JSON.parse(match[1]).forEach(({ src, width, height }) => {
+          if (src && width && height) dimMap[src] = { width, height }
+        })
+      } catch { /* ignore parse errors — dims simply won't be merged */ }
+    }
+  }
+  const photoItemsWithDims = photoItems.map(item => {
+    const dim = dimMap[item.src]
+    return dim ? { ...item, width: dim.width, height: dim.height } : item
+  })
+
   // Write photos.js
   const photosJs =
     `// Auto-generated — do not edit by hand.\n` +
     `// Run \`npm run sync-content\` to pull updates from Google Sheets.\n\n` +
-    `export const allPhotos = ${JSON.stringify(photoItems, null, 2)}\n`
+    `export const allPhotos = ${JSON.stringify(photoItemsWithDims, null, 2)}\n`
 
-  writeFileSync(resolve(__dirname, '../src/data/photos.js'), photosJs)
+  writeFileSync(photosJsPath, photosJs)
   console.log('✓ src/data/photos.js updated')
 
   // --- Shows data ---
