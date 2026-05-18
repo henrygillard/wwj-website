@@ -162,7 +162,7 @@ async function main() {
   for (const row of photosRows.slice(1)) {
     if (!row[0]) continue
     if (row[0].startsWith('/') || row[0].startsWith('http')) {
-      photoItems.push({ src: row[0], alt: row[1] ?? '', group: row[2] ?? '' })
+      photoItems.push({ src: row[0].replace(/\.jpg$/i, '.webp'), alt: row[1] ?? '', group: row[2] ?? '' }) // normalise extension — Phase 3
     } else if (row[1]) {
       photoMeta[row[0]] = row[1]
     }

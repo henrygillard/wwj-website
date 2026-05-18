@@ -2,7 +2,7 @@
   padding: 6rem 2rem;
   background:
     linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
-    url('/photos/radio-east/cover-image.jpg') no-repeat center center / cover;
+    url('/photos/radio-east/cover-image.webp') no-repeat center center / cover;
 }
 
 /* Override global section-label to yellow for dark background */

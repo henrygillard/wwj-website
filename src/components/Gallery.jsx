@@ -33,7 +33,7 @@ export default function Gallery({ onOpenPhoto }) {
             className={styles.item}
             onClick={() => onOpenPhoto(photo.src)}
           >
-            <img src={photo.src} alt={photo.alt} loading="lazy" />
+            <img src={photo.src} alt={photo.alt} width={photo.width} height={photo.height} loading="lazy" />
             <div className={styles.overlay} />
           </div>
         ))}
