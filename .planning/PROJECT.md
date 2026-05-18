@@ -27,10 +27,10 @@ An event booker who lands on the site should immediately understand that Wrestle
 
 ### Active
 
-- [ ] SEC-01: Express server has security headers via Helmet
-- [ ] SEC-02: /api/contact endpoint has rate limiting
-- [ ] SEC-03: Contact form email HTML injection is patched
-- [ ] SEC-04: Hashed JS/CSS assets served with long-term immutable cache headers
+- [x] SEC-01: Express server has security headers via Helmet
+- [x] SEC-02: /api/contact endpoint has rate limiting
+- [x] SEC-03: Contact form email HTML injection is patched
+- [x] SEC-04: Hashed JS/CSS assets served with long-term immutable cache headers
 - [ ] SCHEMA-01: Stale past event removed from JSON-LD EventScheduled schema
 - [ ] SCHEMA-02: Rock-Box event Offer includes price and priceCurrency
 - [ ] SCHEMA-03: Canonical URL, og:url, and sitemap loc use consistent trailing slash

@@ -7,7 +7,7 @@
 
 ## Phases
 
-- [ ] **Phase 1: Security & Server Hardening** - Harden the Express server with security headers, rate limiting, input escaping, and correct long-term caching for hashed assets
+- [x] **Phase 1: Security & Server Hardening** - Harden the Express server with security headers, rate limiting, input escaping, and correct long-term caching for hashed assets
 - [ ] **Phase 2: Schema, Technical & Quick Fixes** - Fix all stale/broken structured data, resolve llms.txt accuracy, add video preload, fix gallery CLS, and add favicon
 - [ ] **Phase 3: Image Performance & CWV** - Compress the entire image library to WebP, add all missing image dimensions, and add the LCP preload hint
 - [ ] **Phase 4: Content & Booking Conversion** - Transform the site into a booking-conversion page with expanded copy, real testimonials, band member info, and 600+ word count
@@ -26,7 +26,10 @@
   2. Submitting more than 10 contact form requests from the same IP within 15 minutes returns a 429 response
   3. A contact form submission containing `<script>alert(1)</script>` in the name field sends an email with the HTML escaped, not rendered
   4. A request for a hashed asset under /assets/ returns cache-control: max-age=31536000, immutable
-**Plans**: TBD
+**Plans**: 1 plan
+
+Plans:
+- [x] 01-01-PLAN.md — Install helmet + express-rate-limit; rewrite server/index.js with all four security controls (SEC-01 through SEC-04)
 
 ### Phase 2: Schema, Technical & Quick Fixes
 **Goal**: All structured data is accurate and current, llms.txt matches live show data, videos do not preload, gallery layout is stable on load, and the site has a favicon
@@ -92,7 +95,7 @@
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Security & Server Hardening | 0/? | Not started | - |
+| 1. Security & Server Hardening | 1/1 | Complete | 2026-05-17 |
 | 2. Schema, Technical & Quick Fixes | 0/? | Not started | - |
 | 3. Image Performance & CWV | 0/? | Not started | - |
 | 4. Content & Booking Conversion | 0/? | Not started | - |
@@ -100,4 +103,4 @@
 
 ---
 *Roadmap created: 2026-05-17*
-*Last updated: 2026-05-17 after v1.0 milestone start*
+*Last updated: 2026-05-17 after Phase 1 executed (01-01 complete)*
