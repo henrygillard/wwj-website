@@ -63,7 +63,7 @@ Plans:
 **Plans**: 2 plans
 
 Plans:
-- [ ] 03-01-PLAN.md — Install sharp, write verify-images.mjs scaffold and convert-images.mjs; convert all 35 JPEGs to WebP with resize; update photos.js with .webp paths and width/height fields; delete originals (PERF-01, PERF-02)
+- [x] 03-01-PLAN.md — Install sharp, write verify-images.mjs scaffold and convert-images.mjs; convert all 35 JPEGs to WebP with resize; update photos.js with .webp paths and width/height fields; delete originals (PERF-01, PERF-02)
 - [ ] 03-02-PLAN.md — Patch Gallery.jsx, About.jsx, Nav.jsx img attrs; update Hero.jsx/VideoSection.jsx poster paths; update About.module.css background path; add LCP preload + update 3 og/schema paths in index.html; patch sync-from-sheet.mjs (PERF-03, PERF-04)
 
 ### Phase 4: Content & Booking Conversion
