@@ -8,10 +8,10 @@
 
 ### Security
 
-- [ ] **SEC-01**: Express server sets security headers via Helmet (HSTS, X-Frame-Options, CSP, X-Content-Type-Options, Referrer-Policy)
-- [ ] **SEC-02**: /api/contact endpoint enforces rate limiting (max 10 requests per 15 minutes per IP)
-- [ ] **SEC-03**: User-supplied fields (name, email, inquiry, message) are HTML-escaped before insertion into the email template
-- [ ] **SEC-04**: Hashed JS/CSS assets under /assets/ are served with cache-control: max-age=31536000, immutable
+- [x] **SEC-01**: Express server sets security headers via Helmet (HSTS, X-Frame-Options, CSP, X-Content-Type-Options, Referrer-Policy)
+- [x] **SEC-02**: /api/contact endpoint enforces rate limiting (max 10 requests per 15 minutes per IP)
+- [x] **SEC-03**: User-supplied fields (name, email, inquiry, message) are HTML-escaped before insertion into the email template
+- [x] **SEC-04**: Hashed JS/CSS assets under /assets/ are served with cache-control: max-age=31536000, immutable
 
 ### Schema
 
@@ -86,10 +86,10 @@
 
 | Requirement | Phase | Status |
 |---|---|---|
-| SEC-01 | Phase 1 | Pending |
-| SEC-02 | Phase 1 | Pending |
-| SEC-03 | Phase 1 | Pending |
-| SEC-04 | Phase 1 | Pending |
+| SEC-01 | Phase 1 | Complete ✓ |
+| SEC-02 | Phase 1 | Complete ✓ |
+| SEC-03 | Phase 1 | Complete ✓ |
+| SEC-04 | Phase 1 | Complete ✓ |
 | SCHEMA-01 | Phase 2 | Pending |
 | SCHEMA-02 | Phase 2 | Pending |
 | SCHEMA-03 | Phase 2 | Pending |
