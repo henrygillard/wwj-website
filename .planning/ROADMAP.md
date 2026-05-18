@@ -43,7 +43,11 @@ Plans:
   3. The canonical tag, og:url, and sitemap `<loc>` all resolve to exactly https://wrestlewithjimmy.com/ (with trailing slash)
   4. llms.txt no longer lists the May 14 Meanwhile Brewing show in the Upcoming Shows section
   5. Both video elements have preload="none", gallery photos render in a stable order on first paint, and a favicon appears in the browser tab
-**Plans**: TBD
+**Plans**: 2 plans
+
+Plans:
+- [ ] 02-01-PLAN.md — Schema fixes: remove past Meanwhile Brewing event, add Rock-Box price/priceCurrency, add trailing slash to canonical/og:url/WebSite url, remove May 14 from llms.txt (SCHEMA-01, SCHEMA-02, SCHEMA-03, SCHEMA-04)
+- [ ] 02-02-PLAN.md — Technical fixes: add preload="none" to both video elements, move Gallery shuffle to useEffect, create favicon.png and declare in index.html (PERF-05, PERF-06, PERF-07)
 
 ### Phase 3: Image Performance & CWV
 **Goal**: Every image on the site is a compressed WebP file that loads fast, and every img element has explicit dimensions so layout never shifts during page load
@@ -96,11 +100,11 @@ Plans:
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Security & Server Hardening | 1/1 | Complete | 2026-05-17 |
-| 2. Schema, Technical & Quick Fixes | 0/? | Not started | - |
+| 2. Schema, Technical & Quick Fixes | 0/2 | Not started | - |
 | 3. Image Performance & CWV | 0/? | Not started | - |
 | 4. Content & Booking Conversion | 0/? | Not started | - |
 | 5. Entity Authority & GEO | 0/? | Not started | - |
 
 ---
 *Roadmap created: 2026-05-17*
-*Last updated: 2026-05-17 after Phase 1 executed (01-01 complete)*
+*Last updated: 2026-05-18 after Phase 2 planned (02-01 and 02-02)*
