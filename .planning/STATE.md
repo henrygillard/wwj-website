@@ -4,12 +4,12 @@ milestone: v1.0
 milestone_name: milestone
 status: ready_to_plan
 last_updated: "2026-05-18T18:14:16.729Z"
-last_activity: 2026-05-18 -- Phase 03 execution started
+last_activity: 2026-05-18 — Phase 03 complete (PERF-01 through PERF-04 satisfied)
 progress:
   total_phases: 5
   completed_phases: 3
-  total_plans: 5
-  completed_plans: 3
+  total_plans: 7
+  completed_plans: 5
   percent: 60
 ---
 
@@ -17,16 +17,15 @@ progress:
 
 ## Current Position
 
-Phase: 4
+Phase: 4 — Content & Booking Conversion
 Plan: Not started
-Plans: 03-01-PLAN.md (Wave 1 — Planned), 03-02-PLAN.md (Wave 2 — Planned)
 Status: Ready to plan
-Last activity: 2026-05-19
+Last activity: 2026-05-18 — Phase 3 complete, advancing to Phase 4
 
 ## Progress Bar
 
 ```
-[████████░░░░░░░░░░░░] 40% — 2/5 phases complete, phase 3 planned
+[████████████░░░░░░░░] 60% — 3/5 phases complete
 ```
 
 ## Phase Status
@@ -35,7 +34,7 @@ Last activity: 2026-05-19
 |-------|------|--------|
 | 1 | Security & Server Hardening | Complete |
 | 2 | Schema, Technical & Quick Fixes | Complete |
-| 3 | Image Performance & CWV | Planned — ready to execute |
+| 3 | Image Performance & CWV | Complete |
 | 4 | Content & Booking Conversion | Not started |
 | 5 | Entity Authority & GEO | Not started |
 
@@ -66,3 +65,6 @@ Last activity: 2026-05-19
 - [Phase 2] Rock-Box ticket price must be looked up from Stubwire URL before writing SCHEMA-02 edit
 - [Phase 2 — 02-01] Used Stubwire embedded JSON-LD price (10.25) as source of truth for Rock-Box Offer block
 - [Phase 2 — 02-01] MusicGroup url intentionally left without trailing slash — SCHEMA-03 scope is canonical, og:url, WebSite url only
+- [Phase 3] Portrait hero images (4:6 ratio) required bounding-box resize at 600px/q60 (hero-1) and 1200px/q50 (hero-2) to meet PERF-01 ≤100 KB — dimensions 600×900 and 1200×1800 respectively
+- [Phase 3] sync-from-sheet.mjs now merges existing width/height dims back into photos.js on every sync (CR-01 fix) — dimensions persist through content syncs
+- [Phase 3] img dimensions in About.jsx are from sharp conversion output (600×900, 1200×1800) not estimated values
