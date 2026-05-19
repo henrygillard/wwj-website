@@ -23,25 +23,17 @@ An event booker who lands on the site should immediately understand that Wrestle
 
 ### Validated
 
-(None yet — this is the first milestone)
+- [x] SEC-01 through SEC-04: Security hardening complete (Validated in Phase 1: Security & Server Hardening)
+- [x] SCHEMA-01 through SCHEMA-04: Schema correctness and llms.txt fixes complete (Validated in Phase 2: Schema, Technical & Quick Fixes)
+- [x] PERF-01: Hero image compressed to WebP, 94.7 KB (Validated in Phase 3: Image Performance & CWV)
+- [x] PERF-02: All 35 gallery images compressed to WebP, all under 120 KB (Validated in Phase 3)
+- [x] PERF-03: All img elements have width and height attributes — CLS fix (Validated in Phase 3)
+- [x] PERF-04: LCP preload hint added for hero image with fetchpriority="high" (Validated in Phase 3)
+- [x] PERF-05: Both video elements have preload="none" (Validated in Phase 2)
+- [x] PERF-06: Gallery shuffle moved to useEffect to fix SSR hydration CLS (Validated in Phase 2)
+- [x] PERF-07: Favicon added to index.html (Validated in Phase 2)
 
 ### Active
-
-- [x] SEC-01: Express server has security headers via Helmet
-- [x] SEC-02: /api/contact endpoint has rate limiting
-- [x] SEC-03: Contact form email HTML injection is patched
-- [x] SEC-04: Hashed JS/CSS assets served with long-term immutable cache headers
-- [ ] SCHEMA-01: Stale past event removed from JSON-LD EventScheduled schema
-- [ ] SCHEMA-02: Rock-Box event Offer includes price and priceCurrency
-- [ ] SCHEMA-03: Canonical URL, og:url, and sitemap loc use consistent trailing slash
-- [ ] SCHEMA-04: llms.txt updated — stale May 14 show removed from Upcoming Shows
-- [ ] PERF-01: Hero image compressed to WebP, under 100KB
-- [ ] PERF-02: All 32+ gallery images compressed to WebP, under 120KB each
-- [ ] PERF-03: All img elements have width and height attributes (CLS fix)
-- [ ] PERF-04: LCP preload hint added for hero image
-- [ ] PERF-05: Both video elements have preload="none"
-- [ ] PERF-06: Gallery shuffle moved to useEffect to fix SSR hydration CLS
-- [ ] PERF-07: Favicon added to index.html
 - [ ] CONTENT-01: Booking section expanded with ~150 words targeting event bookers
 - [ ] CONTENT-02: Testimonials section reframed — real venue quotes added, fake review framing removed
 - [ ] CONTENT-03: Band member names and instruments added to About section
@@ -106,4 +98,4 @@ This document evolves at phase transitions and milestone boundaries.
 4. Update Context with current state
 
 ---
-*Last updated: 2026-05-17 after v1.0 milestone start*
+*Last updated: 2026-05-18 — Phase 3 complete (Image Performance & CWV)*
