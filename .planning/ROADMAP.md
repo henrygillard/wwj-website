@@ -78,8 +78,11 @@ Plans:
   3. The About section names each band member alongside their instrument
   4. A word count tool reports 600+ indexable words on the rendered homepage
   5. The footer nav links all 6 sections (About, Gallery, Videos, Shows, Reviews, Book Us) and the "10+ Venues" stat in About reflects the accurate count from events.js
-**Plans**: TBD
+**Plans**: 1 plan (CONTENT-01, CONTENT-02, CONTENT-03, CONTENT-04, CONTENT-06 deferred per user decision in 04-CONTEXT.md)
 **UI hint**: yes
+
+Plans:
+- [ ] 04-01-PLAN.md — Add Videos, Shows, Reviews anchor links to Footer.jsx nav; final 6-link order: About, Gallery, Videos, Shows, Reviews, Book Us (CONTENT-05)
 
 ### Phase 5: Entity Authority & GEO
 **Goal**: Wrestle With Jimmy is a verifiable, well-described entity that AI systems and search engines can confidently cite — with real social profile links in schema, expanded llms.txt passages, an automated sitemap, and event schema that never drifts from the data
@@ -105,9 +108,9 @@ Plans:
 | 1. Security & Server Hardening | 1/1 | Complete | 2026-05-17 |
 | 2. Schema, Technical & Quick Fixes | 2/2 | Complete   | 2026-05-18 |
 | 3. Image Performance & CWV | 0/2 | Not started | - |
-| 4. Content & Booking Conversion | 0/? | Not started | - |
+| 4. Content & Booking Conversion | 0/1 | Not started | - |
 | 5. Entity Authority & GEO | 0/? | Not started | - |
 
 ---
 *Roadmap created: 2026-05-17*
-*Last updated: 2026-05-18 — Phase 3 plans created (03-01, 03-02)*
+*Last updated: 2026-05-19 — Phase 4 plan created (04-01); CONTENT-01 through CONTENT-04 and CONTENT-06 deferred per user decision*
