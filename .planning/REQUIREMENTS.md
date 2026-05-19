@@ -26,9 +26,9 @@
 - [ ] **PERF-02**: All gallery and about-section images are converted to WebP and served under 120KB each
 - [ ] **PERF-03**: Every img element across Gallery.jsx, About.jsx, and Nav.jsx has explicit width and height attributes
 - [ ] **PERF-04**: index.html includes a <link rel="preload"> hint for the hero image with fetchpriority="high"
-- [ ] **PERF-05**: Both video elements (Hero.jsx and VideoSection.jsx) have preload="none"
-- [ ] **PERF-06**: Gallery photo shuffle runs only in useEffect (client-side) to eliminate SSR/hydration order mismatch
-- [ ] **PERF-07**: A favicon.png is created and declared in index.html via <link rel="icon">
+- [x] **PERF-05**: Both video elements (Hero.jsx and VideoSection.jsx) have preload="none"
+- [x] **PERF-06**: Gallery photo shuffle runs only in useEffect (client-side) to eliminate SSR/hydration order mismatch
+- [x] **PERF-07**: A favicon.png is created and declared in index.html via <link rel="icon">
 
 ### Content
 
@@ -98,9 +98,9 @@
 | PERF-02 | Phase 3 | Pending |
 | PERF-03 | Phase 3 | Pending |
 | PERF-04 | Phase 3 | Pending |
-| PERF-05 | Phase 2 | Pending |
-| PERF-06 | Phase 2 | Pending |
-| PERF-07 | Phase 2 | Pending |
+| PERF-05 | Phase 2 | Complete |
+| PERF-06 | Phase 2 | Complete |
+| PERF-07 | Phase 2 | Complete |
 | CONTENT-01 | Phase 4 | Pending |
 | CONTENT-02 | Phase 4 | Pending |
 | CONTENT-03 | Phase 4 | Pending |
