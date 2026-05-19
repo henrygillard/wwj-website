@@ -11,6 +11,9 @@ export default function Footer() {
       <nav className={styles.links}>
         <a href="#about">About</a>
         <a href="#gallery">Gallery</a>
+        <a href="#video">Videos</a>
+        <a href="#events">Shows</a>
+        <a href="#testimonials">Reviews</a>
         <a href="#contact">Book Us</a>
       </nav>
       <p className={styles.copy}>© {new Date().getFullYear()} WWJ. All rights reserved.</p>
