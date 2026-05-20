@@ -2,7 +2,7 @@
 // Run `npm run sync-content` to pull updates from Google Sheets.
 
 export const HERO = {
-  "eyebrow": "Austin, TX · Weezer + '90s / 2000s Alt Rock Cover Band",
+  "eyebrow": "Weezer + '90s / 2000s Alt Rock Cover Band",
   "title": "WWJ",
   "titleScreenReader": "WWJ — Wrestle With Jimmy",
   "subtitleLine1": "Playing the songs that defined a generation",
@@ -109,7 +109,7 @@ export const CONTACT = {
 }
 
 export const FOOTER = {
-  "tagline": "Austin's Weezer tribute band — available for bookings in Austin, TX and surrounding areas."
+  "tagline": "Weezer tribute band — available for bookings everywhere."
 }
 
 export const SHOWS = {
