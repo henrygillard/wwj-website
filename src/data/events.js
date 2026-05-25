@@ -8,7 +8,7 @@ export const EVENTS = [
     "venue": "The Rock-Box",
     "location": "San Antonio, TX",
     "url": "https://www.stubwire.com/e/37806/anthem182/therockbox/",
-    "upcoming": true
+    "upcoming": false
   },
   {
     "date": "2026-05-14",
