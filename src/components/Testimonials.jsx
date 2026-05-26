@@ -32,6 +32,10 @@ export default function Testimonials() {
             </div>
           ))}
         </div>
+        <div className={styles.bookBanner}>
+          <p>Ready to book your own Wrestle With Jimmy experience?</p>
+          <a href="#contact" className={styles.bookBtn}>Book Us →</a>
+        </div>
       </div>
     </section>
   )

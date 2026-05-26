@@ -108,6 +108,21 @@
   color: var(--gray);
   font-size: 0.95rem;
   font-style: italic;
+  margin-bottom: 1.25rem;
+}
+
+.bookLink {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--blue);
+  text-decoration: none;
+  letter-spacing: 0.04em;
+  transition: color 0.15s;
+}
+
+.bookLink:hover {
+  color: var(--blue-dark);
 }
 
 .pastHeading {

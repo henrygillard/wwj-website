@@ -232,6 +232,13 @@ async function main() {
 
   writeFileSync(resolve(__dirname, '../src/data/events.js'), eventsJs)
   console.log('✓ src/data/events.js updated')
+
+  // Update sitemap lastmod to today's date
+  const sitemapPath = resolve(__dirname, '../public/sitemap.xml')
+  const today = new Date().toISOString().slice(0, 10)
+  const sitemap = readFileSync(sitemapPath, 'utf-8')
+  writeFileSync(sitemapPath, sitemap.replace(/<lastmod>[^<]+<\/lastmod>/, `<lastmod>${today}</lastmod>`))
+  console.log(`✓ public/sitemap.xml lastmod updated to ${today}`)
 }
 
 function parseKV(rows) {

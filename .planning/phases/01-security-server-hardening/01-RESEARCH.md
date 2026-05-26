@@ -297,7 +297,7 @@ app.use(
         scriptSrc: ["'self'", "'unsafe-inline'"],
         styleSrc: ["'self'", 'https:', "'unsafe-inline'"],
         fontSrc: ["'self'", 'https://fonts.googleapis.com', 'https://fonts.gstatic.com'],
-        imgSrc: ["'self'", 'data:'],
+        imgSrc: ["'self'", 'data:', 'https://wwj-video-bucket.s3.us-east-2.amazonaws.com'],
         mediaSrc: ["'self'", 'https://wwj-video-bucket.s3.us-east-2.amazonaws.com'],
         connectSrc: ["'self'"],
         objectSrc: ["'none'"],
@@ -413,17 +413,17 @@ app.listen(PORT, () => {
 | A2 | `'unsafe-inline'` in script-src is acceptable because the site has no user-generated script execution paths | Pattern 1 | If the site later adds user content rendered as HTML, this weakens XSS protection. Acceptable at current scope. |
 | A3 | The S3 video domain `wwj-video-bucket.s3.us-east-2.amazonaws.com` is stable and won't change | Pattern 1 (mediaSrc) | If bucket or region changes, video is blocked by CSP. Low risk for now. |
 
-## Open Questions
+## Open Questions (RESOLVED)
 
 1. **CSP strictness vs. JSON-LD compatibility**
    - What we know: Helmet blocks inline scripts by default; JSON-LD blocks are inline scripts; adding `'unsafe-inline'` weakens script-src protection
    - What's unclear: Whether Google's structured data parsers read JSON-LD via HTTP response headers (alternative) or only from inline script tags
-   - Recommendation: Use `'unsafe-inline'` for now (the site has no user-generated script paths, so the XSS risk is low). If a stricter CSP is desired in a future phase, JSON-LD can be moved to a separate file served with `application/ld+json` MIME type via a dedicated route, but that is out of scope for Phase 1.
+   - RESOLVED: Use `'unsafe-inline'` for now (the site has no user-generated script paths, so the XSS risk is low). If a stricter CSP is desired in a future phase, JSON-LD can be moved to a separate file served with `application/ld+json` MIME type via a dedicated route, but that is out of scope for Phase 1.
 
 2. **Rate limiter persistence across dyno restarts**
    - What we know: In-memory store resets when the Heroku dyno restarts or sleeps; the free/eco tier restarts frequently
    - What's unclear: Whether this matters for the business (a spammer who hits the limit can bypass it by waiting for a restart)
-   - Recommendation: In-memory store is acceptable for Phase 1. A persistent store (Redis) is a v2 concern if spam becomes a real problem.
+   - RESOLVED: In-memory store is acceptable for Phase 1. A persistent store (Redis) is a v2 concern if spam becomes a real problem.
 
 ## Environment Availability
 

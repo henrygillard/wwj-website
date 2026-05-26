@@ -407,17 +407,17 @@ Place this immediately after `<link rel="canonical">` in `index.html`.
 
 ---
 
-## Open Questions
+## Open Questions (RESOLVED)
 
-1. **Google Sheet photo paths after .webp migration**
+1. **Google Sheet photo paths after .webp migration** — RESOLVED
    - What we know: Sheet contains `.jpg` paths in column A. The sync script will normalise them to `.webp` via the patch.
    - What's unclear: Should the Sheet itself also be updated to `.webp` paths for accuracy? Or is normalising in the script sufficient?
-   - Recommendation: Patching the sync script is sufficient for correctness. Sheet update is a cosmetic improvement that can be done manually at any time.
+   - Resolution: Patching the sync script is sufficient for correctness. Sheet update is a cosmetic improvement that can be done manually at any time. Plan 03-02 Task 1 patches `sync-from-sheet.mjs` accordingly.
 
-2. **Hero image dimensions for preload — correct `imagesrcset` needed?**
+2. **Hero image dimensions for preload — correct `imagesrcset` needed?** — RESOLVED
    - What we know: The requirement only asks for a preload link with `fetchpriority="high"`, no srcset.
    - What's unclear: Should `imagesrcset` be added to the preload for responsive image delivery?
-   - Recommendation: Keep it simple — the requirement specifies a single preload link. Skip `imagesrcset` for this phase; hero is a video poster, not a standard responsive `<img>`.
+   - Resolution: Skip `imagesrcset` for this phase. The requirement specifies a single preload link; hero is a video poster, not a standard responsive `<img>`. Plan 03-02 Task 2 adds the simple single-href preload link.
 
 ---
 

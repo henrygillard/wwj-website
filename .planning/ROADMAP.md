@@ -82,7 +82,7 @@ Plans:
 **UI hint**: yes
 
 Plans:
-- [ ] 04-01-PLAN.md — Add Videos, Shows, Reviews anchor links to Footer.jsx nav; final 6-link order: About, Gallery, Videos, Shows, Reviews, Book Us (CONTENT-05)
+- [x] 04-01-PLAN.md — Add Videos, Shows, Reviews anchor links to Footer.jsx nav; final 6-link order: About, Gallery, Videos, Shows, Reviews, Book Us (CONTENT-05)
 
 ### Phase 5: Entity Authority & GEO
 **Goal**: Wrestle With Jimmy is a verifiable, well-described entity that AI systems and search engines can confidently cite — with real social profile links in schema, expanded llms.txt passages, an automated sitemap, and event schema that never drifts from the data

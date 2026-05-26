@@ -42,6 +42,7 @@ export default function Events() {
         ) : (
           <div className={styles.noShows}>
             <p>{SHOWS.noShowsMessage}</p>
+            <a href="#contact" className={styles.bookLink}>Book us for your venue →</a>
           </div>
         )}
 

@@ -22,6 +22,7 @@ export default function About({ onOpenPhoto }) {
               </div>
             ))}
           </div>
+          <a href="#contact" className={styles.bookCta}>Book Wrestle With Jimmy →</a>
         </div>
 
         <div className={styles.imageStack}>

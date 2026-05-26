@@ -30,17 +30,36 @@
       "@id": "https://wrestlewithjimmy.com/#musicgroup",
       "name": "Wrestle With Jimmy",
       "alternateName": "WWJ",
-      "description": "Premier Weezer cover band, bringing the blue album energy to venues, festivals, and events everywhere.",
+      "description": "Premier Weezer cover band based in Austin, TX, bringing the Blue Album energy to venues, festivals, and events.",
       "url": "https://wrestlewithjimmy.com",
-      "image": "https://wrestlewithjimmy.com/photos/barton-springs/hero-1.webp",
-      "logo": "https://wrestlewithjimmy.com/logos/logo-white.png",
-      "genre": ["Rock", "Alternative Rock", "Cover Band", "Weezer Tribute", "Weezer Cover Band"],
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://wrestlewithjimmy.com/photos/barton-springs/hero-1.webp"
+      },
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://wrestlewithjimmy.com/logos/logo-white.png"
+      },
+      "genre": ["Rock", "Alternative Rock", "Cover Band"],
       "foundingLocation": {
         "@type": "Place",
-        "name": "Austin, TX"
+        "name": "Austin, TX",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Austin",
+          "addressRegion": "TX",
+          "addressCountry": "US"
+        }
       },
       "email": "wrestlewithjimmyatx@gmail.com",
-      "sameAs": []
+      "mainEntityOfPage": {
+        "@id": "https://wrestlewithjimmy.com/#website"
+      },
+      "makesOffer": {
+        "@type": "Offer",
+        "itemOffered": { "@id": "https://wrestlewithjimmy.com/#booking-service" }
+      },
+      "sameAs": ["https://www.instagram.com/wrestlewithjimmyatx/"]
     }
     </script>
 
@@ -54,47 +73,43 @@
       "url": "https://wrestlewithjimmy.com/",
       "publisher": {
         "@id": "https://wrestlewithjimmy.com/#musicgroup"
+      },
+      "about": {
+        "@id": "https://wrestlewithjimmy.com/#musicgroup"
       }
     }
     </script>
 
-    <!-- Structured Data: Upcoming Events -->
+    <!-- Structured Data: Booking Service -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "ItemList",
-      "itemListElement": [
-        {
-          "@type": "Event",
-          "position": 1,
-          "name": "Wrestle With Jimmy at The Rock-Box",
-          "startDate": "2026-05-23",
-          "eventStatus": "https://schema.org/EventScheduled",
-          "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
-          "location": {
-            "@type": "Place",
-            "name": "The Rock-Box",
-            "address": {
-              "@type": "PostalAddress",
-              "addressLocality": "San Antonio",
-              "addressRegion": "TX",
-              "addressCountry": "US"
-            }
-          },
-          "performer": { "@id": "https://wrestlewithjimmy.com/#musicgroup" },
-          "organizer": { "@id": "https://wrestlewithjimmy.com/#musicgroup" },
-          "offers": {
-            "@type": "Offer",
-            "url": "https://www.stubwire.com/e/37806/anthem182/therockbox/",
-            "price": "10.25",
-            "priceCurrency": "USD",
-            "availability": "https://schema.org/InStock"
-          },
-          "url": "https://www.stubwire.com/e/37806/anthem182/therockbox/"
+      "@type": "Service",
+      "@id": "https://wrestlewithjimmy.com/#booking-service",
+      "name": "Wrestle With Jimmy — Live Performance Booking",
+      "description": "Book Wrestle With Jimmy for your venue, festival, private party, or event. Available in Austin, TX and surrounding areas.",
+      "provider": {
+        "@id": "https://wrestlewithjimmy.com/#musicgroup"
+      },
+      "areaServed": {
+        "@type": "State",
+        "name": "Texas"
+      },
+      "serviceType": "Live Music Performance",
+      "availableChannel": {
+        "@type": "ServiceChannel",
+        "serviceUrl": "https://wrestlewithjimmy.com/#contact",
+        "servicePhone": {
+          "@type": "ContactPoint",
+          "contactType": "booking",
+          "email": "wrestlewithjimmyatx@gmail.com"
         }
-      ]
+      },
+      "url": "https://wrestlewithjimmy.com/#contact"
     }
     </script>
+
+    <!-- Structured Data: Upcoming Events (populated when shows are scheduled) -->
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
