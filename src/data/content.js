@@ -16,7 +16,7 @@ export const HERO = {
 
 export const ABOUT = {
   "sectionLabel": "Who we are",
-  "heading": "We are Wrestle With Jimmy.",
+  "heading": "Austin's Premier Weezer Cover Band",
   "paragraph1": "Wrestle With Jimmy is Austin's premier Weezer cover band, bringing the Blue Album energy to venues, festivals, and breweries across the ATX. From Buddy Holly to Undone, we play the songs that made a generation of kids feel like it was okay to be a little weird. Oh yeah, and we play all your favorite '90s/2000s Alt Rock Bangers, too. ",
   "paragraph2": "Whether you caught us at Central Machine Works, Brisketfest, Independence Brewing, or Radio East — you already know what it's about. Big riffs, matching tracksuits, and an unconditional love for Weezer.",
   "stats": [
@@ -109,7 +109,7 @@ export const CONTACT = {
 }
 
 export const FOOTER = {
-  "tagline": "Austin's Weezer tribute band — available for bookings in Austin, TX and surrounding areas."
+  "tagline": "Austin's Weezer cover band — available for bookings in Austin, TX and surrounding areas."
 }
 
 export const SHOWS = {

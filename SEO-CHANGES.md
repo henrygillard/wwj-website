@@ -1,6 +1,32 @@
 # SEO Improvements — May 2026
 
-Research via `claude-seo:seo-technical` + `claude-seo:seo-schema` agents.
+Research via `claude-seo:seo-technical` + `claude-seo:seo-schema` + `claude-seo:seo-content` agents.
+
+---
+
+## Keyword Ranking Fixes — "Weezer Cover Band" (2026-05-26)
+
+Root cause: title tag claimed the keyword but rendered body copy had almost no heading-level or depth signals to support it (~280 words, H1 = "WWJ", first H2 = "We are Wrestle With Jimmy.").
+
+### Changes made
+
+| Fix | File | Notes |
+|---|---|---|
+| About H2 → "Austin's Premier Weezer Cover Band" | `src/data/content.js` | ⚠️ Auto-generated — mirror in Google Sheet (About › Section heading) |
+| Footer tagline: "tribute" → "cover" | `src/data/content.js` | ⚠️ Auto-generated — mirror in Google Sheet (Footer & Nav) |
+| Title tag → keyword-first + Austin geo | `index.html` | `Weezer Cover Band \| Wrestle With Jimmy — Austin, TX` |
+| Meta description → Austin + Blue Album | `index.html` | 149 chars, includes local signal + specific content reference |
+| Schema `genre` → restored "Weezer Cover Band" | `index.html` | Also added "90s Alternative Rock" variant |
+| Logo `alt` → keyword-bearing | `src/components/Nav.jsx` | `Wrestle With Jimmy — Weezer Cover Band` |
+
+### H1 — not changed (intentional)
+The H1 "WWJ" is a 3-character logo mark rendered at `clamp(6rem, 22vw, 16rem)`. Changing the text would break the hero layout. The first H2 on the page ("Austin's Premier Weezer Cover Band") is the correct keyword heading fix.
+
+### Next steps for full impact
+- **Update Google Sheet** for the two `content.js` changes before next sync
+- **Expand About copy** to ~400 words naming albums (Blue Album, Pinkerton, Maladroit, Green Album) — this is the highest long-term lever
+- **Add "What We Play" section** with H2 + setlist prose — captures long-tail queries
+- **Verify SSR in prod**: `curl -s -A "Googlebot" https://wrestlewithjimmy.com/ | grep -i "weezer"` — if empty, Googlebot isn't seeing any of these signals
 
 ---
 

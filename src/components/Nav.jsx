@@ -10,7 +10,7 @@ export default function Nav() {
   return (
     <nav className={styles.nav}>
       <a href="#home" className={styles.logo} onClick={close}>
-        <img src={logos.whiteTransparent} alt="WWJ" className={styles.logoImg} width={110} height={110} />
+        <img src={logos.whiteTransparent} alt="Wrestle With Jimmy — Weezer Cover Band" className={styles.logoImg} width={110} height={110} />
       </a>
       <ul className={`${styles.links} ${open ? styles.linksOpen : ''}`}>
         <li><a href="#about" onClick={close}>About</a></li>
