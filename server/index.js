@@ -25,6 +25,18 @@ const PORT = process.env.PORT || 3000
 // Trust Heroku's single proxy hop — required for correct req.ip
 app.set('trust proxy', 1)
 
+// Redirect HTTP → HTTPS and www → non-www (301 permanent)
+app.use((req, res, next) => {
+  const host = req.hostname
+  const isHttps = req.headers['x-forwarded-proto'] === 'https'
+  const isWww = host.startsWith('www.')
+
+  if (!isHttps || isWww) {
+    return res.redirect(301, `https://${isWww ? host.slice(4) : host}${req.url}`)
+  }
+  next()
+})
+
 // Security headers
 app.use(
   helmet({
