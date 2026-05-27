@@ -29,6 +29,17 @@ export default function Footer() {
             <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"/>
           </svg>
         </a>
+        <a
+          href="https://www.bandsintown.com/a/15649987"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Wrestle With Jimmy on Bandsintown"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+            <path d="M4 4h7.5a4.5 4.5 0 0 1 0 9H4V4z"/>
+            <path d="M4 13h8.5a4.5 4.5 0 0 1 0 9H4V13z"/>
+          </svg>
+        </a>
       </div>
       <p className={styles.copy}>© {new Date().getFullYear()} WWJ. All rights reserved.</p>
     </footer>
