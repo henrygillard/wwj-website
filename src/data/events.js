@@ -4,6 +4,13 @@
 
 export const EVENTS = [
   {
+    "date": "2026-07-04",
+    "venue": "Oasis Brewing",
+    "location": "Austin, TX",
+    "url": "https://www.otxbc.com/",
+    "upcoming": true
+  },
+  {
     "date": "2026-05-23",
     "venue": "The Rock-Box",
     "location": "San Antonio, TX",
