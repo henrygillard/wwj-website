@@ -13,7 +13,7 @@ export default function Hero() {
         loop
         muted
         playsInline
-        preload="none"
+        preload="auto"
       />
       <div className={styles.content}>
         <p className={styles.eyebrow}>{HERO.eyebrow}</p>
