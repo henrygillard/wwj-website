@@ -8,7 +8,7 @@ export const EVENTS = [
     "venue": "Oasis Brewing",
     "location": "Austin, TX",
     "url": "https://www.otxbc.com/",
-    "upcoming": true
+    "upcoming": false
   },
   {
     "date": "2026-05-23",
