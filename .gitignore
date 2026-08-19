@@ -6,3 +6,4 @@ dist
 public/video/
 .google-credentials.json
 .vercel
+.claude/
