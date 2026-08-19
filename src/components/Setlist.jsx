@@ -16,7 +16,10 @@ export default function Setlist() {
             <p className={styles.playerLabel}>{SETLIST.playlistLabel}</p>
             <iframe
               className={styles.playerFrame}
-              src={`https://open.spotify.com/embed/playlist/${SPOTIFY_PLAYLIST_ID}?utm_source=generator`}
+              // theme=0 renders neutral dark grey. Without it Spotify tints the
+              // player with a colour extracted from the playlist artwork, which
+              // currently comes out dark red against this off-white section.
+              src={`https://open.spotify.com/embed/playlist/${SPOTIFY_PLAYLIST_ID}?utm_source=generator&theme=0`}
               title="Wrestle With Jimmy — live setlist playlist on Spotify"
               width="100%"
               height="352"
