@@ -1,0 +1,160 @@
+.setlist {
+  padding: 6rem 2rem;
+  background: var(--off-white);
+}
+
+.inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.header {
+  max-width: 720px;
+  margin-bottom: 3rem;
+}
+
+.subtitle {
+  margin-top: 1rem;
+  color: var(--gray);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.player {
+  margin-bottom: 3rem;
+}
+
+.playerLabel {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gray);
+  margin-bottom: 0.9rem;
+}
+
+/* Spotify's embed renders its own rounded corners; the wrapper clips the frame
+   so the player keeps its shape against the off-white section background. */
+.playerFrame {
+  display: block;
+  width: 100%;
+  border: 0;
+  border-radius: 12px;
+  min-height: 352px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.album {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+/* The Blue Album is the headline set — give it the full width on wide screens
+   so its ten tracks read as one block rather than a cramped column. */
+.album:first-child {
+  grid-column: 1 / -1;
+  border-top: 4px solid var(--blue);
+}
+
+.albumHead {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  padding-bottom: 0.9rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.cover {
+  width: 64px;
+  height: 64px;
+  flex-shrink: 0;
+  border-radius: 4px;
+  object-fit: cover;
+  display: block;
+}
+
+.albumHeadText {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  min-width: 0;
+}
+
+.albumTitle {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1.35rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--dark);
+}
+
+.albumMeta {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gray);
+}
+
+.songs {
+  list-style: none;
+}
+
+.album:first-child .songs {
+  columns: 2;
+  column-gap: 2.5rem;
+}
+
+.song {
+  padding: 0.4rem 0;
+  font-size: 0.98rem;
+  line-height: 1.4;
+  color: var(--dark);
+  break-inside: avoid;
+}
+
+.footnote {
+  margin-top: 2.5rem;
+  font-size: 0.92rem;
+  font-style: italic;
+  color: var(--gray);
+}
+
+.bookCta {
+  display: inline-block;
+  margin-top: 1.5rem;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--white);
+  background: var(--blue);
+  padding: 0.75rem 1.4rem;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background 0.15s;
+}
+
+.bookCta:hover {
+  background: var(--blue-dark);
+}
+
+@media (max-width: 700px) {
+  .setlist {
+    padding: 4rem 1.5rem;
+  }
+
+  .album:first-child .songs {
+    columns: 1;
+  }
+}

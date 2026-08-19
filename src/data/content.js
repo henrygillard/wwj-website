@@ -21,7 +21,7 @@ export const ABOUT = {
   "paragraph2": "Whether you caught us at Central Machine Works, Brisketfest, Independence Brewing, or Radio East — you already know what it's about. Big riffs, matching tracksuits, and an unconditional love for Weezer.",
   "stats": [
     {
-      "number": "10+",
+      "number": "AUTO",
       "label": "Venues played"
     },
     {

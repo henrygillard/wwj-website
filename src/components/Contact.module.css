@@ -2,6 +2,7 @@
   padding: 6rem 2rem;
   position: relative;
   overflow: hidden;
+  background: var(--white);
 }
 
 .contact::before {

@@ -58,6 +58,24 @@
   letter-spacing: -0.01em;
 }
 
+.titleMark {
+  display: block;
+}
+
+/* Visually hidden but present in the DOM and the accessibility tree — the real
+   heading text behind the WWJ logotype. */
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 .accent {
   color: var(--yellow);
 }

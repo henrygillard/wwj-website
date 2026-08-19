@@ -1,8 +1,17 @@
 import styles from './About.module.css'
 import { ABOUT } from '../data/content'
+import { EVENTS } from '../data/events'
 
 const hero1 = '/photos/barton-springs/hero-1.webp'
 const hero2 = '/photos/barton-springs/hero-2.webp'
+
+// A stat whose sheet value is the literal "AUTO" is derived from the shows data
+// instead of typed by hand, so it can't drift as new venues are added.
+const VENUE_COUNT = new Set(EVENTS.map((e) => e.venue)).size
+
+function statNumber(value) {
+  return value === 'AUTO' ? `${VENUE_COUNT}+` : value
+}
 
 export default function About({ onOpenPhoto }) {
 
@@ -17,7 +26,7 @@ export default function About({ onOpenPhoto }) {
           <div className={styles.stats}>
             {ABOUT.stats.map((s) => (
               <div key={s.label} className={styles.statCard}>
-                <div className={styles.statNumber}>{s.number}</div>
+                <div className={styles.statNumber}>{statNumber(s.number)}</div>
                 <div className={styles.statLabel}>{s.label}</div>
               </div>
             ))}

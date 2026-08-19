@@ -46,9 +46,25 @@ app.use(
         scriptSrc: ["'self'", "'unsafe-inline'"],
         styleSrc: ["'self'", 'https:', "'unsafe-inline'"],
         fontSrc: ["'self'", 'https://fonts.googleapis.com', 'https://fonts.gstatic.com'],
-        imgSrc: ["'self'", 'data:', 'https://wwj-video-bucket.s3.us-east-2.amazonaws.com'],
+        imgSrc: [
+          "'self'",
+          'data:',
+          'https://wwj-video-bucket.s3.us-east-2.amazonaws.com',
+          // Spotify embed serves album art from its own image CDN
+          'https://i.scdn.co',
+          'https://image-cdn-ak.spotifycdn.com',
+          'https://image-cdn-fa.spotifycdn.com',
+        ],
         mediaSrc: ["'self'", 'https://wwj-video-bucket.s3.us-east-2.amazonaws.com'],
         connectSrc: ["'self'"],
+        // Scoped to the two embed hosts we actually use — without this the
+        // setlist player and promo video are blocked, since frameSrc otherwise
+        // falls back to defaultSrc 'self'.
+        frameSrc: [
+          "'self'",
+          'https://open.spotify.com',
+          'https://www.youtube-nocookie.com',
+        ],
         objectSrc: ["'none'"],
         baseUri: ["'self'"],
         formAction: ["'self'"],
@@ -132,9 +148,16 @@ app.use(
   })
 )
 
-// SPA fallback — serve index.html for any route
-app.get('*', (_req, res) => {
-  res.sendFile(join(__dirname, '../dist/index.html'))
+// The site is a single route ("/") plus in-page #anchors, which never reach the
+// server. An SPA catch-all here would answer every unknown path with the
+// homepage at HTTP 200 — a soft 404 that search engines index as a duplicate.
+// Serve a real 404 instead.
+app.use((req, res) => {
+  // Unknown /api/* paths should fail as JSON, not HTML.
+  if (req.path.startsWith('/api/')) {
+    return res.status(404).json({ error: 'Not found' })
+  }
+  res.status(404).sendFile(join(__dirname, '../dist/404.html'))
 })
 
 app.listen(PORT, () => {

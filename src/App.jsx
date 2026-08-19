@@ -2,6 +2,7 @@ import { useState } from 'react'
 import Nav from './components/Nav'
 import Hero from './components/Hero'
 import About from './components/About'
+import Setlist from './components/Setlist'
 import Gallery from './components/Gallery'
 import VideoSection from './components/VideoSection'
 import Events from './components/Events'
@@ -20,6 +21,8 @@ export default function App() {
       <Hero />
       <TapeStrip />
       <About onOpenPhoto={setLightboxSrc} />
+      <TapeStrip />
+      <Setlist />
       <TapeStrip />
       <Gallery onOpenPhoto={setLightboxSrc} />
       <TapeStrip />
