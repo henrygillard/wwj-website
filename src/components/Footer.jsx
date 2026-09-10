@@ -15,6 +15,7 @@ export default function Footer() {
         <a href="#events">Shows</a>
         <a href="#testimonials">Reviews</a>
         <a href="#contact">Book Us</a>
+        <a href="/press/">Press Kit</a>
       </nav>
       <div className={styles.social}>
         <a
